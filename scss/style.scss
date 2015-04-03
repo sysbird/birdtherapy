@@ -1,0 +1,1503 @@
+@charset "utf-8";
+/*
+Theme Name: birdTHERAPY
+Theme URI: http://www.sysbird.jp/birdtherapy/
+Description: BirdSNAP is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
+Author: Sysbird
+Author URI: http://www.sysbird.jp/wptips/
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, two-columns, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: birdtherapy
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+@import "compass";
+@import "compass/reset";
+
+// variable
+$text-color: #564935;
+$link-color: #06c;
+$accent-color: #61913f;
+//$accent-color: #92B43B;
+$border-color: #e6d9ca;
+$meta-color: #999;
+
+/*------------------------------
+Font Awesome
+-----------------------------*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("font-awesome/fontawesome-webfont.eot?v=4.1.0");
+  src: url("font-awesome/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("font-awesome/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("font-awesome/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("font-awesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@mixin font-awesome($param) {
+  content: $param;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  padding-right: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;}
+
+/* Link
+--------------------------------------------- */
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* Structure
+--------------------------------------------- */
+body {
+    margin:0;
+    padding:0;
+    border:0;
+    width:100%;
+}
+
+.container {
+	width: 96%;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+#sidebar {
+	margin: 0 auto;
+}
+
+#header {
+	width: 100%;
+	z-index: 9999;  /* IE7 and below */
+}
+
+#content {
+	width: 100%;
+}
+
+#footer {
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Body
+-------------------------------------------------------------- */
+body {
+	background: #FFF url("images/bg2.png") repeat left top;
+	font-family: Verdana,Arial, Meiryo , "Hiragino Kaku Gothic Pro" ,sans-serif;
+	color: $text-color;
+
+	* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+/* Header
+-------------------------------------------------------------- */
+#header {
+	position: relative;
+	color: $accent-color;
+	border-top: solid 5px $accent-color;
+	padding-top: 2.3em;
+
+	a {
+		color: $accent-color;
+	}
+
+	#headerimage {
+		img {
+			width: 150%;
+			margin-left: -25%;
+			vertical-align:bottom;
+		}
+	}
+
+	#branding {
+		padding: 1em 0;
+
+		#site-title {
+			margin: 0;
+			padding: 0;
+			font-size: 2.8rem;
+			font-weight: normal;
+			line-height: 1;
+
+			a {
+				display: block;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			img {
+				width: 100%;
+				vertical-align:bottom;
+			}
+		}
+
+		#site-description {
+			display: none;
+			margin: 0;
+			padding: 0.8em 0 0 0;
+		}
+	}
+}
+
+/* Menu
+-------------------------------------------------------------- */
+#menu-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1em;
+
+	.menu {
+		#small-menu {
+			cursor: pointer;
+			display: block;
+			padding: 0.4em;
+		    font-size: 1rem;
+		    background: $accent-color;
+		    color: #FFF;
+   		    font-size: 1.4rem;
+   		    text-align: right;
+
+			&:after {
+			    @include font-awesome("\f0c9");
+			    padding: 0 0 0 0.4em;
+			}
+		}
+
+		ul#menu-primary-items {
+			margin: 0;
+			padding: 0;
+			background-color: $accent-color;
+			display: none; /* visibility will be toggled with jquery */
+
+			li {
+				list-style: none;
+
+				a {
+					padding: 0.4em 0.8em;
+					display: block;
+					color: #FFF;
+					text-decoration: none;
+					line-height: 1.2;
+					border-top: dotted 1px $border-color;
+					*white-space: nowrap; /* IE7 and below */
+
+					&:hover {
+						color: #DDD;
+					}
+				}
+
+				&.about {
+					> a:before {
+					    @include font-awesome("\f06c");
+					    padding-right: 0.4em;
+					}
+				}
+
+				&.aroma {
+					> a:before {
+					    @include font-awesome("\f043");
+					    padding-right: 0.4em;
+					}
+				}
+
+				&.lymph {
+					> a:before {
+					    @include font-awesome("\f21e");
+					    padding-right: 0.4em;
+					}
+				}
+
+				&.reservation {
+					> a:before {
+					    @include font-awesome("\f017");
+					    padding-right: 0.4em;
+					}
+				}
+
+				&.access {
+					> a:before {
+					    @include font-awesome("\f239");
+					    padding-right: 0.4em;
+					}
+				}
+
+				&.menu-item-has-children {
+					position: relative;
+
+					> a {
+						padding-right: 2.2em;
+					}
+
+					span {
+			    		width: 2em;
+			    		height: 2em;
+			    		position: absolute;
+			    		top: 0;
+			    		right: 0;
+			    		color: #FFF;
+						cursor: pointer;
+
+						&:before {
+							@include font-awesome("\f067");
+				    		padding: 0.5em 0 0 0.4em;
+						}
+					}
+
+					ul {
+						display: none;
+					}
+
+					&.open {
+						> span:before {
+							@include font-awesome("\f068");
+						}
+					}
+				}
+
+				ul {
+					padding-left: 1.6em;
+				}
+			}
+
+			.current-menu-item > a,
+			.current-menu-ancestor > a,
+			.current-menu-parent > a {
+				color: #DDD;
+			}
+
+			> li {
+
+			}
+		}
+	}
+}
+
+/* Posts
+--------------------------------------------- */
+#content {
+	font-size: 1.1rem;
+	padding-bottom: 1.6em;
+
+	.content-header {
+		margin: 0;
+		padding: 1.6em 10px 0.8em;
+
+		.content-title {
+			margin: 0;
+			padding-bottom: 5px;
+			font-size: 2rem;
+		}
+	}
+
+	.article {
+		border: solid 2px $border-color;
+		background-color: #FFF;
+		border-radius: 4px;
+		padding: 0.8em;
+		margin-bottom: 0.8em;
+		width: 100%;
+		word-wrap: break-word;
+		@include clearfix;
+	}
+
+	.hentry {
+		.entry-header {
+			.entry-title {
+				color: $text-color;
+				font-size: 2rem;
+				font-weight: normal;
+				margin: 0 0 0.4em 0;
+				padding: 0 0 0.4em 0;
+				line-height: 1;
+				border: none;
+				border-bottom: solid 2px $border-color;
+
+				a {
+					color: $text-color;
+				}
+			}
+		}
+
+		.entry-meta,
+		.entry-footer {
+			color: $meta-color;
+			font-size: 0.9rem;
+			line-height: 1.4;
+			margin: 0.4em 0 1.6em;
+
+			a {
+				color: $meta-color;
+			}
+
+			.comment {
+				&:before {
+				    @include font-awesome("\f075");
+				}
+			}
+
+			.parent-post-link {
+				&:before {
+				    @include font-awesome("\f03e");
+				}
+			}
+
+			.category {
+				text-indent: -0.5em;
+				padding-left: 1em;
+
+				&:before {
+				    @include font-awesome("\f07b");
+				}
+			}
+
+			.tag {
+				text-indent: -0.5em;
+				padding-left: 1em;
+
+				&:before {
+				    @include font-awesome("\f02c");
+				}
+			}
+		}
+
+		.entry-footer {
+			border: dashed 1px $border-color;
+			padding: 0.8em;
+		}
+
+		a.more-link {
+			display: block;
+			font-size: 0.9em;
+			color: $link-color;
+			padding: 0.4em 0.8em;
+			border: solid 1px $link-color;
+			text-align: center;
+
+			&:hover {
+				text-decoration: none;
+				background: $link-color;
+				color: #FFF;
+			}
+
+			&:after {
+			    @include font-awesome("\f061");
+			    padding: 0 0 0 0.2em;
+			}
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0.7em 0;
+		line-height:1.2;
+		font-weight: normal;
+		color: $text-color;
+
+		a {
+			color: $text-color;
+		}
+	}
+
+	h1 {font-size:2.4rem;}
+	h2 {font-size:2rem;}
+	h3 {font-size:1.8rem;}
+	h4 {font-size:1.6rem;}
+	h5 {font-size:1.4rem;}
+	h6 {font-size:1.2rem;}
+
+	h2 {
+		border-bottom: dashed 1px $text-color;
+		padding-bottom: 0.4em;
+	}
+
+	h3 {
+		border-left: solid 7px $text-color;
+		padding-left: 10px;
+	}
+		
+	.entry-content,
+	#comments {
+		p {
+			line-height: 1.6;
+			margin: 0 0 1.6em;
+		}
+
+		blockquote {
+			margin-left: 1em;
+			padding-left: 1em;
+			border-left: 10px solid $border-color;
+
+			small {
+				display: block;
+				line-height: 20px;
+				color: #999999;
+			}
+
+			small:before {
+				content: '\2014 \00A0';
+			}
+
+			cite:before {
+				content: "-";
+			}
+
+			cite {
+				color: #999999;
+				display: block;
+			}
+
+		}
+
+		table {
+			max-width: 100%;
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			margin-bottom: 1.6em;
+
+			th,
+			td {
+				border-bottom: 1px solid $border-color;
+				line-height: 1.4;
+				padding: 0.8em;
+				text-align: left;
+				vertical-align: top;
+			}
+
+			th {
+				border-bottom: 2px solid $border-color;
+				font-weight: bold;
+			}
+		}
+
+		pre {
+			border: dashed 1px $border-color;
+			background: #FFF;
+			padding: 0.8em;
+			margin-bottom: 1.6em;
+			line-height: 1.2;
+			color: $text-color;
+		}
+
+		code {
+			color: $text-color;
+			padding: 0 2px;
+		}
+
+		code, kbd, pre, samp {
+		    font-family: monospace,serif;
+		}
+
+		hr {
+		    background-color: $meta-color;
+		    border: 0 none;
+		    height: 1px;
+		    margin-bottom: 1.6m;
+		}
+
+		sup, sub {
+		    font-size: 80%;
+		    height: 0;
+		    line-height: 0;
+		    position: relative;
+		    vertical-align: baseline;
+		}
+
+		sub {
+			top: 0.5ex;
+		}
+
+		sup {
+			bottom: 1ex;
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		strong {
+			font-weight: bold;
+		}
+
+		abbr, acronym {
+	    	border-bottom: 1px dotted #666;
+	    	cursor: help;
+		}
+		ul,
+		ol {
+			margin: 0 0 1.6em 1em;
+			padding: 0 0 0 1em;
+			line-height: 1.4;
+
+			li {
+				padding: 0.2em 0;
+			}
+
+			ul,
+			ol {
+				margin-bottom: 0;
+			}
+		}
+
+		ul {
+			list-style: disc;
+			ul {
+				list-style: circle;
+				ul {
+					list-style: square;
+				}
+			}
+		}
+
+		ol {
+			list-style: decimal;
+			ol {
+				list-style:upper-alpha;
+				ol {
+					list-style:lower-roman;
+					ol {
+						list-style:lower-alpha;
+					}
+				}
+			}
+		}
+
+		dl {
+			margin:0 0 1em 0;
+			line-height: 1.6;
+
+			dt {
+				font-weight: bold;
+			}
+
+			dd {
+				margin: 0 1.5em 1.6em;
+				padding: 0;
+			}
+		}
+
+		del {
+			color: #C00;
+		}
+
+		ins {
+			background: #ffc;
+			color: $text-color;
+			text-decoration: none;
+		}
+
+		ul.topics {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+
+			li {
+				margin-bottom: 0.8em;
+
+				.entry-header {
+					.entry-title {
+						border-bottom: none;
+						margin: 0 0 0.4em 0;
+						padding-bottom: 0;
+					}
+				}
+
+				p {
+					margin-bottom: 0.8em;
+				}
+			}
+		}
+
+		ul.list {
+			padding: 0;
+			margin: 0 0 0.8em 0;
+			list-style-type: none;
+			overflow: hidden;
+
+			li {
+				border-top: dotted 1px $border-color;
+				margin: -1px 0 0 0;
+				padding-left: 9em;
+				text-indent: -9em;
+				@include clearfix;
+
+				a {
+					display: block;
+					color: $text-color;
+					padding: 0.4em 0;
+
+					&:before {
+					    @include font-awesome("\f0da");
+					    color: $border-color;
+					}
+				}
+
+				time {
+					display: block;
+					float: left;
+				    padding-left: 0.8em;
+					width: 9em;
+				}
+			}
+		}
+	}
+}
+
+/* Images
+-------------------------------------------------------------- */
+#content .hentry img,
+.widget img {
+	max-width: 100%;
+	height: auto;
+}
+
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto;
+}
+
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 0.75em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 0.75em;
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter {
+	margin-bottom: 0.75em;
+}
+
+a:hover img {
+	@include opacity(0.9);
+}
+
+#content .hentry {
+	.wp-caption,
+	.gallery-caption {
+		font-size: 0.9em;
+		line-height: 1;
+	    color: $meta-color;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.wp-caption {
+		padding: 5px;
+		background: $border-color;
+		max-width: 100%;
+
+		p {
+			text-align: center;
+			margin: 5px 0 0 0;
+			line-height: 1;
+		}
+	}
+
+	.gallery-caption {
+		margin: 5px 0 0 0;
+	}
+
+	.gallery {
+		margin: 0 auto;
+		clear: both;
+
+		.gallery-item {
+			float: left;
+			padding: 0 5px;
+			margin-bottom: 10px;
+			text-align: center;
+			width: 33%;
+
+			a {
+				display: block;
+			}
+
+			img {
+				vertical-align:bottom;
+			}
+		}
+
+		&.gallery-columns-2 .gallery-item {
+			max-width: 50%;
+		}
+
+		&.gallery-columns-3 .gallery-item {
+			max-width: 33.33%;
+		}
+		&.gallery-columns-4 .gallery-item {
+			max-width: 25%;
+		}
+
+		&.gallery-columns-5 .gallery-item {
+			max-width: 20%;
+		}
+
+		&.gallery-columns-6 .gallery-item {
+			max-width: 16.66%;
+		}
+
+		&.gallery-columns-7 .gallery-item {
+			max-width: 14.28%;
+		}
+
+		&.gallery-columns-8 .gallery-item {
+			max-width: 12.5%;
+		}
+
+		&.gallery-columns-9 .gallery-item {
+			max-width: 11.11%;
+		}
+	}
+}
+
+/*  Make sure videos and embeds fit their containers
+-------------------------------------------------------------- */
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+.entry-content .twitter-tweet-rendered {
+	max-width: 100% !important; /* Override the Twitter embed fixed width */
+}
+
+/* Forms
+-------------------------------------------------------------- */
+#content #comments #commentform {
+	border: dashed 1px $border-color;
+	padding: 10px 15px 0 15px;
+	margin: 15px 0;
+	max-width: 650px;
+	background: #FFF;
+
+	label {
+		display: block;
+		margin-bottom: 0.8em;
+	}
+
+	em {
+		font-size: 85%;
+		display: block;
+		padding: 5px 0;
+	}
+
+	label input {
+		width: 95%;
+		max-width: 300px;
+	  	padding: 5px;
+		background: #FFF;
+		border: solid 1px $border-color;
+	}
+
+	textarea {
+		width: 100%;
+		height: 100px;
+	  	padding:5px;
+		background: #FFF;
+		border: solid 1px $border-color;
+	}
+
+	input#submit {
+		padding: 0.8em 1.6em;
+	}
+
+	.form-allowed-tags {
+		font-size: 0.9em;
+		padding: 0.4em;
+		border: dashed 1px $border-color;
+	}
+
+	.form-allowed-tags code {
+		display: block;
+	}
+}
+
+/* Sidebar
+--------------------------------------------- */
+#sidebar {
+	.widget {
+		margin: 0 0 1.6em 0;
+	}
+}
+
+/* Footer
+--------------------------------------------- */
+#footer {
+	position: relative;
+	background-color: $accent-color;
+	color: #FFF;
+
+	.site-title {
+		font-size: 2em;
+		line-height: 1.4;
+
+		a {
+			color: #FFF;
+		}
+
+		strong {
+			font-weight: bold;
+		}
+
+		.generator {
+
+			&:after {
+			    @include font-awesome("\f19a");
+			    padding-left: 0.2em;
+			}
+		}
+	}
+
+	#back-top {
+		position: fixed;
+		bottom: -80px;
+		right: 10px;
+		z-index: 3;
+
+		a {
+			background: none repeat scroll 0 0 #EEEEEE;
+			border-radius: 10px;
+			display: block;
+			height: 120px;
+			opacity: 0.7;
+			text-align: center;
+			text-decoration: none;
+			width: 80px;
+    
+			span {
+				@include hide-text;
+			}
+
+			&:hover {
+				text-decoration: none;
+				@include opacity(0.8);
+			}
+
+			&:before {
+			    @include font-awesome("\f062");
+			    font-size: 50px;
+			    display: block;
+				text-align: center;
+				padding: 0;
+				color: #999;
+			}
+		}
+	}
+}
+
+/* Widget
+--------------------------------------------- */
+#widget-area {
+	@include clearfix;
+}
+
+.widget {
+	margin: 20px 0;
+	width: 100%;
+
+	a {
+		text-decorationration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.widget_image img {
+		height: auto;
+		max-width: 100%;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+		font-weight: normal;
+		margin: 0 0 0.4em 0;
+		padding: 0 0 0.4em 0;
+		border-bottom: solid 2px $border-color;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin-left: 0;
+		overflow: hidden;
+
+		li {
+			margin-top: -1px;
+			border-top: dotted 1px $border-color;
+			padding: 0.3em 0;
+
+			ul {
+				padding: 0.5em 0 0 0.5em;
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.textwidget {
+		> * {
+			line-height: 1.4;
+			margin-bottom: 1.4em;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	#wp-calendar {
+		border-collapse: collapse;
+		border-spacing: 0;
+
+		caption {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+
+		tbody {
+			th,
+			td {
+				text-align: center;
+				border-top: 1px solid $border-color;
+				padding: 8px;
+
+				a {
+					font-weight: bold;
+					display: block;
+					padding: 0.2em 0.4em;
+					margin: 0 auto;
+					border: solid 1px $link-color;
+
+					&:hover {
+						background: $link-color;
+						color: $border-color;
+						text-decoration: none;
+					}
+				}
+		    }
+		}
+
+		thead {
+			th {
+				padding: 8px;
+				text-align: center;
+			}
+		}
+
+
+		tfoot {
+			border-top: 1px solid $border-color;
+
+			a {
+				font-size: 1.2em;
+			}
+
+			#next {
+				text-align: right;
+			}
+
+			td {
+				padding: 8px 0;
+			}
+		}
+	}
+
+	a.btn {
+		display: block;
+		font-size: 0.9em;
+		color: #FFF;
+		padding: 0.4em 0.8em;
+		text-decoration: none;
+		margin-bottom: 0.4em;
+		background-color: lighten( $text-color, 10% );
+
+		&.reservation {
+			&:before {
+			    @include font-awesome("\f017");
+			    padding-right: 0.2em;
+			}
+		}
+
+		&.cancel {
+			&:before {
+			    @include font-awesome("\f0e2");
+			    padding-right: 0.2em;
+			}
+		}
+
+		&.inquiry {
+			&:before {
+			    @include font-awesome("\f0e0");
+			    padding-right: 0.2em;
+			}
+		}
+
+		&.map {
+			&:before {
+			    @include font-awesome("\f041");
+			    padding-right: 0.2em;
+			}
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: lighten( $text-color, 20% );
+		}
+
+		&:before {
+		    @include font-awesome("\f061");
+		    padding-rught: 0.4em;
+		}
+	}
+
+	&.nav {
+		li {
+			&.menu-item-has-children > a {
+				border-bottom: solid 2px lighten( $text-color, 10% );
+				font-size: 1.4em;
+				padding-bottom: 0.4em;
+				display: block;
+				color: $text-color;
+			}
+
+			ul.sub-menu {
+				a {
+					display: block;
+					color: $text-color;
+					padding: 0.3em 0 0.3em 0.6em;
+					text-indent: -0.3em;
+
+					&:before {
+					    @include font-awesome("\f0da");
+					    color: $border-color;
+					}
+
+				}
+			}
+		}
+	}
+}
+
+/* Searcform
+--------------------------------------------- */
+#searchform {
+	width: 100%;
+	height: 30px;
+	position: relative;
+
+	label {
+	    display: block;
+	    font-size: 0;
+	    overflow: hidden;
+	    text-indent: -9999px;
+	}
+
+	#s {
+		width: 80%;
+		padding: 5px 10px 5px 5px;
+		height: 30px;
+		line-height: 1;
+		border-radius: 4px 0 0 4px;
+		border-left: solid 1px lighten( $text-color, 10% );
+		border-top: solid 1px lighten( $text-color, 10% );
+		border-bottom: solid 1px lighten( $text-color, 10% );
+	}
+
+	#searchsubmit {
+		position: absolute;
+		top: 0;
+		right: 1px;
+		border: 0 none;
+		cursor: pointer;
+		width: 20%;
+		height: 30px;
+		border-radius: 0 4px 4px 0;
+   		margin: 0;
+		background: lighten( $text-color, 10% );
+		color: #FFF;
+	    -webkit-appearance: button;
+	    @include font-awesome("\f005");
+	    font-size: 1.2em;
+	}
+}
+
+/* Single
+-------------------------------------------------------------------- */
+.single {
+	#content {
+		#nav-below {
+			padding: 0 10px;
+			@include clearfix;
+
+			.nav-next,
+			.nav-previous {
+				display: block;
+				padding: 5px 0;
+			}
+
+			.nav-previous {
+				text-align: right;
+
+				a:after {
+				    @include font-awesome("\f061");
+				    padding-left: 0.2em;
+				}
+			}
+
+			.nav-next {
+				a:before {
+				    @include font-awesome("\f060");
+				}
+			}
+		}
+	}
+}
+
+/* Media queries for responsive design
+--------------------------------------------- */
+/* --- iPad Landscape --- */
+@media screen and (min-width: 660px) {
+
+	#header {
+		padding-top: 0;
+		border-bottom: 0;
+
+		#headerimage {
+			img {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+
+		#branding {
+			&.logo {
+				#site-title {
+					max-width: 50%
+				}
+			}
+		}
+	}
+
+	#menu-wrapper {
+		width: 96%;
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+
+		*zoom: 1;
+		&:after {
+		    clear: both;
+   			content: "";
+    		display: block;
+		}
+
+		.menu {
+			#small-menu {
+				display: none;
+			}
+
+			ul#menu-primary-items {
+				display: block !important;
+				border-bottom: solid 2px $border-color;
+				padding: 0.4em 0;
+				background-color: transparent;
+				letter-spacing: -0.4em;
+
+
+				> li {
+					display: inline-block;
+					border-left: solid 1px $border-color;
+					width: 20%;
+
+					> a {
+						text-align: center;
+						padding: 0.4em 1.6em;
+					}
+
+					&:first-child {
+						border: none;
+					}
+				}
+
+				li {
+					position: relative;
+					text-align: left;
+					letter-spacing: normal;
+
+					&.menu-item-has-children {
+						span {
+							display: none;
+						}
+
+						&.open {
+							> ul {
+								display: none;
+							}
+						}
+
+						> a {
+							padding-right: 0.8em;
+						}
+
+						>a:after {
+						   @include font-awesome("\f0d7");
+						   padding-left: 5px;
+						}
+					}
+
+					&:hover > ul {
+						display: block !important;
+  					}
+
+					a {
+						border: none;
+						color: $text-color;
+
+						&:hover {
+							color: $accent-color;
+						}
+					}
+
+					&:hover > ul {
+						visibility: visible;
+						opacity: 1;
+					}
+
+					ul {
+						display: block !important;
+						opacity: 0;
+						visibility: hidden;
+						transition: .5s;
+
+						margin: 0;
+						padding: 0;
+						display: none; /* hide dropdown */
+						width: 200px;
+						position: absolute;
+						top: 2em;
+						left: 0;
+						border: solid 1px $border-color;
+						border-top: solid 2px $accent-color;
+						z-index: 9999;
+
+   						li {
+							margin: 0;
+							padding: 0;
+
+							&.menu-item-has-children {
+								>a:after {
+								   @include font-awesome("\f0da");
+								   padding-left: 5px;
+								}
+							}
+
+							a {
+								background: url("images/bg2.png") repeat left top;
+								border-top: solid 1px $border-color;
+								border-bottom: none;
+								height: auto;
+								padding: 0.8em 0.4em;
+								white-space: normal;
+
+								&:hover {
+									text-decoration: none;
+								}
+							}
+
+							ul {
+								top: -2px;
+								left: 100%;
+							}
+						}
+					}
+				}
+
+				.current-menu-item > a,
+				.current-menu-ancestor > a,
+				.current-menu-parent > a {
+					color: $accent-color;
+				}
+			}
+		}
+	}
+
+	#main {
+		width: 100%;
+		float: left;
+		padding: 1.6em 300px 1.6em 0;
+	}
+
+	#content {
+		font-size: 1rem;
+
+		.content-header {
+			.content-title {
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	#sidebar {
+	    float: right;
+	    width: 300px;
+		padding: 1.6em 0 0 20px;
+	    margin-left: -300px;
+	}
+
+	.single {
+		#content #nav-below {
+			padding: 0 1.6em;
+
+			.nav-next,
+			.nav-previous {
+				max-width: 48%;
+			}
+
+			.nav-next {
+				float: left;
+			}
+
+			.nav-previous {
+				float: right;
+			}
+		}
+	}
+}
+
+/* --- PCs --- */
+@media screen and (min-width: 960px) {
+
+	.container,
+	#menu-wrapper {
+		width: 960px;
+	}
+
+	#header {
+		#branding {
+			#site-title {
+				a {
+					display: inline;
+				}
+			}
+
+			#site-description {
+				display: block;
+			}
+		}
+	}
+
+	#content {
+		.article {
+			margin-bottom: 1.6em;
+			padding: 1.6em;
+		}
+
+		.hentry {
+			.entry-eyecatch {
+				float: right;
+				margin-left: 0.8em;
+				max-width: 300px;
+
+	           &:after {
+	                border-right: 12px solid #FFF;
+	                border-top: 7px solid transparent;
+	                border-bottom: 7px solid transparent;
+	                border-left: none;
+	                left: -11px;
+	                bottom: 20px;
+	            }
+
+	            &:before {
+	                border-right: 12px solid $border-color;
+	                border-top: 7px solid transparent;
+	                border-bottom: 7px solid transparent;
+	                border-left: none;
+	                left: -13px;
+	                bottom: 20px;
+	            }
+            }
+
+			ul.topics {
+				@include clearfix;
+
+				li {
+					width: 48%;
+					float: left;
+
+					&:first-child {
+						margin-right: 4%;
+					}
+				}
+			}
+		}
+	}
+
+	#widget-area {
+		.widget {
+			width: 290px;
+			margin: 20px 10px 0 0;
+			float: left;
+		}
+	}
+
+	.archive,
+	.search {
+		#content ul.article {
+			padding: 0 1.6em 1.6em;
+
+			li.hentry {
+				.entry-title {
+					float: left;
+					max-width: 70%;
+				}
+
+				.postdate {
+					float: right;
+					max-width: 30%;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
