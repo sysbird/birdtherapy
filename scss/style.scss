@@ -25,6 +25,7 @@ $accent-color: #33C099;
 $logo-color: #FF8300;
 $border-color: #e6d9ca;
 $meta-color: #999;
+$sidebar-width: 300px;
 
 /*------------------------------
 Font Awesome
@@ -163,18 +164,7 @@ body {
 	}
 
 	a.home {
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		background-color: $accent-color;
-		color: #FFF;
-		padding: 5px 10px 10px;
-		border-radius: 0 0 4px 4px;
-
-		&:before {
-		    @include font-awesome("\f015", 0, 0.2em);
-		}
+		display: none;
 	}
 }
 
@@ -1285,6 +1275,21 @@ video {
 				}
 			}
 		}
+
+		a.home {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: $accent-color;
+			color: #FFF;
+			padding: 5px 10px 10px;
+			border-radius: 0 0 4px 4px;
+
+			&:before {
+			    @include font-awesome("\f015", 0, 0.2em);
+			}
+		}
 	}
 
 	#menu-wrapper {
@@ -1434,7 +1439,7 @@ video {
 	#main {
 		width: 100%;
 		float: left;
-		padding: 1.6em 300px 1.6em 0;
+		padding: 1.6em $sidebar-width 1.6em 0;
 	}
 
 	#content {
@@ -1449,9 +1454,9 @@ video {
 
 	#sidebar {
 	    float: right;
-	    width: 300px;
+	    width: $sidebar-width;
 		padding: 1.6em 0 0 20px;
-	    margin-left: -300px;
+	    margin-left: -($sidebar-width);
 	}
 
 	.single {
