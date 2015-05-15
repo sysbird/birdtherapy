@@ -1,13 +1,5 @@
 jQuery(function() {
 
-	jQuery( window ).load(function() {
-		// Masonry for Footer
-		jQuery( '#widget-area .container' ).masonry({
-			itemSelector: '.widget',
-			isAnimated: true
-		});
-	});
-
 	// Navigation dropdown menu for mobile
 	jQuery( '#menu-primary-items .menu-item-has-children' ).each(function(){
 		jQuery( this ).append( '<span></span>' );

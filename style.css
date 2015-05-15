@@ -125,17 +125,17 @@ body {
 -------------------------------------------------------------- */
 #header {
   position: relative;
-  color: #61913f;
-  border-top: solid 5px #61913f;
+  color: #33c099;
+  border-top: solid 5px #33c099;
   padding-top: 2.3em; }
-  #header a {
-    color: #61913f; }
   #header #headerimage img {
     width: 150%;
     margin-left: -25%;
     vertical-align: bottom; }
   #header #branding {
     padding: 1em 0; }
+    #header #branding a {
+      color: #33c099; }
     #header #branding #site-title {
       margin: 0;
       padding: 0;
@@ -153,6 +153,27 @@ body {
       display: none;
       margin: 0;
       padding: 0.8em 0 0 0; }
+  #header a.home {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #33c099;
+    color: #FFF;
+    padding: 5px 10px 10px;
+    border-radius: 0 0 4px 4px; }
+    #header a.home:before {
+      content: "\f015";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.1em;
+      line-height: 1;
+      padding-left: 0;
+      padding-right: 0.2em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
 
 /* Menu
 -------------------------------------------------------------- */
@@ -167,7 +188,7 @@ body {
     display: block;
     padding: 0.4em;
     font-size: 1rem;
-    background: #61913f;
+    background: #33c099;
     color: #FFF;
     font-size: 1.4rem;
     text-align: right; }
@@ -177,15 +198,17 @@ body {
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       padding: 0 0 0 0.4em; }
   #menu-wrapper .menu ul#menu-primary-items {
     margin: 0;
     padding: 0;
-    background-color: #61913f;
+    background-color: #33c099;
     display: none;
     /* visibility will be toggled with jquery */ }
     #menu-wrapper .menu ul#menu-primary-items li {
@@ -207,8 +230,10 @@ body {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         padding-right: 0.4em; }
@@ -218,8 +243,10 @@ body {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         padding-right: 0.4em; }
@@ -229,8 +256,10 @@ body {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         padding-right: 0.4em; }
@@ -240,8 +269,10 @@ body {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         padding-right: 0.4em; }
@@ -251,8 +282,10 @@ body {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         padding-right: 0.4em; }
@@ -274,8 +307,10 @@ body {
             font-family: FontAwesome;
             font-style: normal;
             font-weight: normal;
+            font-size: 1.1em;
             line-height: 1;
-            padding-right: 0.2em;
+            padding-left: 0;
+            padding-right: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             padding: 0.5em 0 0 0.4em; }
@@ -287,8 +322,10 @@ body {
           font-family: FontAwesome;
           font-style: normal;
           font-weight: normal;
+          font-size: 1.1em;
           line-height: 1;
-          padding-right: 0.2em;
+          padding-left: 0;
+          padding-right: 0;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale; }
       #menu-wrapper .menu ul#menu-primary-items li ul {
@@ -347,8 +384,10 @@ body {
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
     #content .hentry .entry-meta .parent-post-link:before,
@@ -358,8 +397,10 @@ body {
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
     #content .hentry .entry-meta .category,
@@ -373,8 +414,10 @@ body {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
     #content .hentry .entry-meta .tag,
@@ -388,8 +431,10 @@ body {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
   #content .hentry .entry-footer {
@@ -397,23 +442,24 @@ body {
     padding: 0.8em; }
   #content .hentry a.more-link {
     display: block;
-    font-size: 0.9em;
     color: #0066cc;
-    padding: 0.4em 0.8em;
-    border: solid 1px #0066cc;
+    padding: 0.8em;
+    border: solid 2px #0066cc;
+    border-radius: 4px;
     text-align: center; }
     #content .hentry a.more-link:hover {
       text-decoration: none;
-      background: #0066cc;
-      color: #FFF; }
+      background-color: #F5F5F5; }
     #content .hentry a.more-link:after {
-      content: "\f061";
+      content: "\f054";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       padding: 0 0 0 0.2em; }
@@ -421,7 +467,7 @@ body {
     margin: 0.7em 0;
     line-height: 1.2;
     font-weight: normal;
-    color: #564935; }
+    color: #33c099; }
     #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a {
       color: #564935; }
   #content h1 {
@@ -437,10 +483,10 @@ body {
   #content h6 {
     font-size: 1.2rem; }
   #content h2 {
-    border-bottom: dashed 1px #564935;
+    border-bottom: dashed 1px #33c099;
     padding-bottom: 0.4em; }
   #content h3 {
-    border-left: solid 7px #564935;
+    border-left: solid 7px #33c099;
     padding-left: 10px; }
   #content .entry-content p,
   #content #comments p {
@@ -638,8 +684,10 @@ body {
           font-family: FontAwesome;
           font-style: normal;
           font-weight: normal;
+          font-size: 1.1em;
           line-height: 1;
-          padding-right: 0.2em;
+          padding-left: 0;
+          padding-right: 0;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           color: #e6d9ca; }
@@ -730,6 +778,36 @@ a:hover img {
   #content .hentry .gallery.gallery-columns-9 .gallery-item {
     max-width: 11.11%; }
 
+/*------------------------------
+Bread Crumb
+------------------------------*/
+ul.bread_crumb {
+  margin: 0 0 0.8em 0;
+  padding: 0;
+  line-height: 1; }
+  ul.bread_crumb li {
+    display: inline;
+    width: auto;
+    font-size: 12px;
+    margin-left: 0;
+    color: #999999; }
+    ul.bread_crumb li:before {
+      content: "\f0da";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.1em;
+      line-height: 1;
+      padding-left: 0;
+      padding-right: 0.2em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    ul.bread_crumb li a {
+      text-decoration: none; }
+      ul.bread_crumb li a:hover {
+        text-decoration: underline; }
+
 /*  Make sure videos and embeds fit their containers
 -------------------------------------------------------------- */
 embed,
@@ -787,8 +865,11 @@ video {
 --------------------------------------------- */
 #footer {
   position: relative;
-  background-color: #61913f;
-  color: #FFF; }
+  background-color: #33c099;
+  color: #FFF;
+  padding: 1.6em 0; }
+  #footer .widget a {
+    color: #FFF; }
   #footer .site-title {
     font-size: 2em;
     line-height: 1.4; }
@@ -796,54 +877,40 @@ video {
       color: #FFF; }
     #footer .site-title strong {
       font-weight: bold; }
-    #footer .site-title .generator:after {
-      content: "\f19a";
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1;
-      padding-right: 0.2em;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-left: 0.2em; }
+  #footer .copyright {
+    border-top: dashed 1px #FFF;
+    padding-top: 0.8em; }
   #footer #back-top {
     position: fixed;
-    bottom: -80px;
-    right: 10px;
+    bottom: -1em;
+    right: 0.2em;
     z-index: 3; }
     #footer #back-top a {
-      background: none repeat scroll 0 0 #EEEEEE;
-      border-radius: 10px;
       display: block;
-      height: 120px;
       opacity: 0.7;
       text-align: center;
-      text-decoration: none;
-      width: 80px; }
-      #footer #back-top a span {
-        text-indent: -119988px;
-        overflow: hidden;
-        text-align: left; }
+      text-decoration: none; }
       #footer #back-top a:hover {
         text-decoration: none;
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
         opacity: 0.8; }
       #footer #back-top a:before {
-        content: "\f062";
+        content: "\f139";
         display: inline-block;
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
+        font-size: 1.1em;
         line-height: 1;
-        padding-right: 0.2em;
+        padding-left: 0;
+        padding-right: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-size: 50px;
         display: block;
         text-align: center;
         padding: 0;
-        color: #999; }
+        color: #999999; }
 
 /* Widget
 --------------------------------------------- */
@@ -876,6 +943,20 @@ video {
       margin-top: -1px;
       border-top: dotted 1px #e6d9ca;
       padding: 0.3em 0; }
+      .widget ul li:before {
+        content: "\f0da";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1em;
+        line-height: 1;
+        padding-left: 0;
+        padding-right: 0.2em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 0.9em;
+        color: #e6d9ca; }
       .widget ul li ul {
         padding: 0.5em 0 0 0.5em; }
   .widget table {
@@ -887,6 +968,22 @@ video {
     margin-bottom: 1.4em; }
   .widget .textwidget a {
     text-decoration: underline; }
+    .widget .textwidget a.tel {
+      text-decoration: none;
+      color: #33c099;
+      font-size: 1.6em; }
+      .widget .textwidget a.tel:before {
+        content: "\f095";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1em;
+        line-height: 1;
+        padding-left: 0;
+        padding-right: 0.2em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
   .widget #wp-calendar {
     border-collapse: collapse;
     border-spacing: 0; }
@@ -904,12 +1001,9 @@ video {
         display: block;
         padding: 0.2em 0.4em;
         margin: 0 auto;
-        border: solid 1px #0066cc; }
-        .widget #wp-calendar tbody th a:hover,
-        .widget #wp-calendar tbody td a:hover {
-          background: #0066cc;
-          color: #e6d9ca;
-          text-decoration: none; }
+        background-color: #FFF;
+        color: #33c099;
+        text-decoration: none; }
     .widget #wp-calendar thead th {
       padding: 8px;
       text-align: center; }
@@ -923,67 +1017,73 @@ video {
         padding: 8px 0; }
   .widget a.btn {
     display: block;
-    font-size: 0.9em;
     color: #FFF;
-    padding: 0.4em 0.8em;
+    padding: 0.8em;
     text-decoration: none;
     margin-bottom: 0.4em;
-    background-color: #766448; }
+    background-color: #33c099;
+    border-radius: 4px; }
     .widget a.btn.reservation:before {
       content: "\f017";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0.4em;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-right: 0.2em; }
+      -moz-osx-font-smoothing: grayscale; }
     .widget a.btn.cancel:before {
       content: "\f0e2";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0.4em;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-right: 0.2em; }
+      -moz-osx-font-smoothing: grayscale; }
     .widget a.btn.inquiry:before {
       content: "\f0e0";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0.4em;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-right: 0.2em; }
+      -moz-osx-font-smoothing: grayscale; }
     .widget a.btn.map:before {
       content: "\f041";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0.4em;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding-right: 0.2em; }
+      -moz-osx-font-smoothing: grayscale; }
     .widget a.btn:hover {
       text-decoration: none;
-      background-color: #957f5c; }
+      background-color: #40cca6; }
     .widget a.btn:before {
       content: "\f061";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       padding-rught: 0.4em; }
@@ -993,22 +1093,54 @@ video {
     padding-bottom: 0.4em;
     display: block;
     color: #564935; }
+  .widget.nav li ul.sub-menu li:before {
+    content: "";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1em;
+    line-height: 1;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline; }
   .widget.nav li ul.sub-menu a {
     display: block;
     color: #564935;
     padding: 0.3em 0 0.3em 0.6em;
     text-indent: -0.3em; }
     .widget.nav li ul.sub-menu a:before {
-      content: "\f0da";
+      content: "\f096";
       display: inline-block;
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
+      padding-left: 0;
       padding-right: 0.2em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      font-size: 0.9em;
       color: #e6d9ca; }
+  .widget.nav li ul.sub-menu li.current-menu-item a,
+  .widget.nav li ul.sub-menu li.current-menu-item a:before {
+    color: #33c099; }
+  .widget.nav li ul.sub-menu li.current-menu-item a:before {
+    content: "\f046";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1em;
+    line-height: 1;
+    padding-left: 0;
+    padding-right: 0.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9em; }
 
 /* Searcform
 --------------------------------------------- */
@@ -1027,9 +1159,9 @@ video {
     height: 30px;
     line-height: 1;
     border-radius: 4px 0 0 4px;
-    border-left: solid 1px #766448;
-    border-top: solid 1px #766448;
-    border-bottom: solid 1px #766448; }
+    border-left: solid 2px #33c099;
+    border-top: solid 2px #33c099;
+    border-bottom: solid 2px #33c099; }
   #searchform #searchsubmit {
     position: absolute;
     top: 0;
@@ -1040,7 +1172,7 @@ video {
     height: 30px;
     border-radius: 0 4px 4px 0;
     margin: 0;
-    background: #766448;
+    background: #33c099;
     color: #FFF;
     -webkit-appearance: button;
     content: "\f005";
@@ -1048,8 +1180,10 @@ video {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
+    font-size: 1.1em;
     line-height: 1;
-    padding-right: 0.2em;
+    padding-left: 0;
+    padding-right: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 1.2em; }
@@ -1072,8 +1206,10 @@ video {
       font-family: FontAwesome;
       font-style: normal;
       font-weight: normal;
+      font-size: 1.1em;
       line-height: 1;
-      padding-right: 0.2em;
+      padding-left: 0;
+      padding-right: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       padding-left: 0.2em; }
@@ -1083,8 +1219,10 @@ video {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
+    font-size: 1.1em;
     line-height: 1;
-    padding-right: 0.2em;
+    padding-left: 0;
+    padding-right: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
@@ -1145,8 +1283,10 @@ video {
           font-family: FontAwesome;
           font-style: normal;
           font-weight: normal;
+          font-size: 1.1em;
           line-height: 1;
-          padding-right: 0.2em;
+          padding-left: 0;
+          padding-right: 0;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           padding-left: 5px; }
@@ -1156,7 +1296,7 @@ video {
           border: none;
           color: #564935; }
           #menu-wrapper .menu ul#menu-primary-items li a:hover {
-            color: #61913f; }
+            color: #33c099; }
         #menu-wrapper .menu ul#menu-primary-items li:hover > ul {
           visibility: visible;
           opacity: 1; }
@@ -1174,7 +1314,7 @@ video {
           top: 2em;
           left: 0;
           border: solid 1px #e6d9ca;
-          border-top: solid 2px #61913f;
+          border-top: solid 2px #33c099;
           z-index: 9999; }
           #menu-wrapper .menu ul#menu-primary-items li ul li {
             margin: 0;
@@ -1185,8 +1325,10 @@ video {
               font-family: FontAwesome;
               font-style: normal;
               font-weight: normal;
+              font-size: 1.1em;
               line-height: 1;
-              padding-right: 0.2em;
+              padding-left: 0;
+              padding-right: 0;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
               padding-left: 5px; }
@@ -1205,7 +1347,7 @@ video {
       #menu-wrapper .menu ul#menu-primary-items .current-menu-item > a,
       #menu-wrapper .menu ul#menu-primary-items .current-menu-ancestor > a,
       #menu-wrapper .menu ul#menu-primary-items .current-menu-parent > a {
-        color: #61913f; }
+        color: #33c099; }
 
   #main {
     width: 100%;
