@@ -111,8 +111,8 @@ body {
 /* Body
 -------------------------------------------------------------- */
 body {
-  background: white url("images/bg2.png") repeat left top;
-  font-family: Verdana,Arial, Meiryo , "Hiragino Kaku Gothic Pro" ,sans-serif;
+  background-color: #f5f3ed;
+  font-family: Verdana,Arial,"メイリオ", Meiryo, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
   color: #564935; }
   body * {
     -webkit-box-sizing: border-box;
@@ -125,17 +125,28 @@ body {
 -------------------------------------------------------------- */
 #header {
   position: relative;
-  color: #33c099;
-  border-top: solid 5px #33c099;
+  color: #4caf50;
+  border-top: solid 5px #4caf50;
   padding-top: 2.3em; }
-  #header #headerimage img {
-    width: 150%;
-    margin-left: -25%;
-    vertical-align: bottom; }
+  #header #headerimage {
+    margin: 0 0 0.8em 0; }
+    #header #headerimage img {
+      width: 100%;
+      vertical-align: bottom; }
   #header #branding {
-    padding: 1em 0; }
+    padding: 1em 0 1em 64px;
+    position: relative; }
+    #header #branding:before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      content: "";
+      background: url("images/logo.svg");
+      background-size: 100%;
+      width: 64px;
+      height: 64px; }
     #header #branding a {
-      color: #33c099; }
+      color: #4caf50; }
     #header #branding #site-title {
       margin: 0;
       padding: 0;
@@ -163,13 +174,14 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 1em; }
+  height: 1em;
+  z-index: 1; }
   #menu-wrapper .menu #small-menu {
     cursor: pointer;
     display: block;
     padding: 0.4em;
     font-size: 1rem;
-    background: #33c099;
+    background: #4caf50;
     color: #FFF;
     font-size: 1.4rem;
     text-align: right; }
@@ -189,7 +201,7 @@ body {
   #menu-wrapper .menu ul#menu-primary-items {
     margin: 0;
     padding: 0;
-    background-color: #33c099;
+    background-color: #4caf50;
     display: none;
     /* visibility will be toggled with jquery */ }
     #menu-wrapper .menu ul#menu-primary-items li {
@@ -214,10 +226,9 @@ body {
         font-size: 1.1em;
         line-height: 1;
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 0.4em;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        padding-right: 0.4em; }
+        -moz-osx-font-smoothing: grayscale; }
       #menu-wrapper .menu ul#menu-primary-items li.aroma > a:before {
         content: "\f043";
         display: inline-block;
@@ -227,10 +238,9 @@ body {
         font-size: 1.1em;
         line-height: 1;
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 0.4em;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        padding-right: 0.4em; }
+        -moz-osx-font-smoothing: grayscale; }
       #menu-wrapper .menu ul#menu-primary-items li.lymph > a:before {
         content: "\f21e";
         display: inline-block;
@@ -240,10 +250,9 @@ body {
         font-size: 1.1em;
         line-height: 1;
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 0.4em;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        padding-right: 0.4em; }
+        -moz-osx-font-smoothing: grayscale; }
       #menu-wrapper .menu ul#menu-primary-items li.reservation > a:before {
         content: "\f017";
         display: inline-block;
@@ -253,10 +262,9 @@ body {
         font-size: 1.1em;
         line-height: 1;
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 0.4em;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        padding-right: 0.4em; }
+        -moz-osx-font-smoothing: grayscale; }
       #menu-wrapper .menu ul#menu-primary-items li.access > a:before {
         content: "\f239";
         display: inline-block;
@@ -266,10 +274,9 @@ body {
         font-size: 1.1em;
         line-height: 1;
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 0.4em;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        padding-right: 0.4em; }
+        -moz-osx-font-smoothing: grayscale; }
       #menu-wrapper .menu ul#menu-primary-items li.menu-item-has-children {
         position: relative; }
         #menu-wrapper .menu ul#menu-primary-items li.menu-item-has-children > a {
@@ -448,7 +455,7 @@ body {
     margin: 0.7em 0;
     line-height: 1.2;
     font-weight: normal;
-    color: #33c099; }
+    color: #4caf50; }
     #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a {
       color: #564935; }
   #content h1 {
@@ -464,10 +471,10 @@ body {
   #content h6 {
     font-size: 1.2rem; }
   #content h2 {
-    border-bottom: dashed 1px #33c099;
+    border-bottom: dashed 1px #4caf50;
     padding-bottom: 0.4em; }
   #content h3 {
-    border-left: solid 7px #33c099;
+    border-left: solid 7px #4caf50;
     padding-left: 10px; }
   #content .entry-content p,
   #content #comments p {
@@ -846,7 +853,7 @@ video {
 --------------------------------------------- */
 #footer {
   position: relative;
-  background-color: #33c099;
+  background-color: #4caf50;
   color: #FFF;
   padding: 1.6em 0; }
   #footer .widget a {
@@ -951,7 +958,7 @@ video {
     text-decoration: underline; }
     .widget .textwidget a.tel {
       text-decoration: none;
-      color: #33c099;
+      color: #4caf50;
       font-size: 1.6em; }
       .widget .textwidget a.tel:before {
         content: "\f095";
@@ -983,7 +990,7 @@ video {
         padding: 0.2em 0.4em;
         margin: 0 auto;
         background-color: #FFF;
-        color: #33c099;
+        color: #4caf50;
         text-decoration: none; }
     .widget #wp-calendar thead th {
       padding: 8px;
@@ -1002,7 +1009,7 @@ video {
     padding: 0.8em;
     text-decoration: none;
     margin-bottom: 0.4em;
-    background-color: #33c099;
+    background-color: #4caf50;
     border-radius: 4px; }
     .widget a.btn.reservation:before {
       content: "\f017";
@@ -1054,7 +1061,7 @@ video {
       -moz-osx-font-smoothing: grayscale; }
     .widget a.btn:hover {
       text-decoration: none;
-      background-color: #40cca6; }
+      background-color: #5cb860; }
     .widget a.btn:before {
       content: "\f061";
       display: inline-block;
@@ -1106,9 +1113,12 @@ video {
       -moz-osx-font-smoothing: grayscale;
       font-size: 0.9em;
       color: #e6d9ca; }
+    .widget.nav li ul.sub-menu a:hover {
+      color: #4caf50;
+      text-decoration: none; }
   .widget.nav li ul.sub-menu li.current-menu-item a,
   .widget.nav li ul.sub-menu li.current-menu-item a:before {
-    color: #33c099; }
+    color: #4caf50; }
   .widget.nav li ul.sub-menu li.current-menu-item a:before {
     content: "\f046";
     display: inline-block;
@@ -1140,9 +1150,9 @@ video {
     height: 30px;
     line-height: 1;
     border-radius: 4px 0 0 4px;
-    border-left: solid 2px #33c099;
-    border-top: solid 2px #33c099;
-    border-bottom: solid 2px #33c099; }
+    border-left: solid 2px #4caf50;
+    border-top: solid 2px #4caf50;
+    border-bottom: solid 2px #4caf50; }
   #searchform #searchsubmit {
     position: absolute;
     top: 0;
@@ -1153,7 +1163,7 @@ video {
     height: 30px;
     border-radius: 0 4px 4px 0;
     margin: 0;
-    background: #33c099;
+    background: #4caf50;
     color: #FFF;
     -webkit-appearance: button;
     content: "\f005";
@@ -1214,17 +1224,21 @@ video {
   #header {
     padding-top: 0;
     border-bottom: 0; }
-    #header #headerimage img {
-      width: 100%;
-      margin-left: 0; }
-    #header #branding.logo #site-title {
-      max-width: 50%; }
+    #header #headerimage {
+      margin: 1.6em 0 0 0; }
+    #header #branding {
+      padding: 1.6em 0 1em 100px; }
+      #header #branding #site-description {
+        display: block; }
+      #header #branding:before {
+        width: 100px;
+        height: 100px; }
     #header a.home {
       display: block;
       position: absolute;
       top: 0;
       right: 0;
-      background-color: #33c099;
+      background-color: #4caf50;
       color: #FFF;
       padding: 5px 10px 10px;
       border-radius: 0 0 4px 4px; }
@@ -1266,7 +1280,18 @@ video {
         width: 20%; }
         #menu-wrapper .menu ul#menu-primary-items > li > a {
           text-align: center;
-          padding: 0.4em 1.6em; }
+          padding: 0.2em 1.6em 0.6em; }
+          #menu-wrapper .menu ul#menu-primary-items > li > a:before {
+            position: absolute;
+            bottom: -1.2em;
+            left: 45%;
+            background-color: #e6d9ca;
+            color: #FFF;
+            width: 1.6em;
+            height: 1.3em;
+            border-radius: 0.8em;
+            padding-right: 0 !important;
+            padding-top: 0.3em; }
         #menu-wrapper .menu ul#menu-primary-items > li:first-child {
           border: none; }
       #menu-wrapper .menu ul#menu-primary-items li {
@@ -1298,7 +1323,7 @@ video {
           border: none;
           color: #564935; }
           #menu-wrapper .menu ul#menu-primary-items li a:hover {
-            color: #33c099; }
+            color: #4caf50; }
         #menu-wrapper .menu ul#menu-primary-items li:hover > ul {
           visibility: visible;
           opacity: 1; }
@@ -1316,7 +1341,7 @@ video {
           top: 2em;
           left: 0;
           border: solid 1px #e6d9ca;
-          border-top: solid 2px #33c099;
+          border-top: solid 2px #4caf50;
           z-index: 9999; }
           #menu-wrapper .menu ul#menu-primary-items li ul li {
             margin: 0;
@@ -1335,7 +1360,7 @@ video {
               -moz-osx-font-smoothing: grayscale;
               padding-left: 5px; }
             #menu-wrapper .menu ul#menu-primary-items li ul li a {
-              background: url("images/bg2.png") repeat left top;
+              background-color: #f5f3ed;
               border-top: solid 1px #e6d9ca;
               border-bottom: none;
               height: auto;
@@ -1349,7 +1374,11 @@ video {
       #menu-wrapper .menu ul#menu-primary-items .current-menu-item > a,
       #menu-wrapper .menu ul#menu-primary-items .current-menu-ancestor > a,
       #menu-wrapper .menu ul#menu-primary-items .current-menu-parent > a {
-        color: #33c099; }
+        color: #4caf50; }
+        #menu-wrapper .menu ul#menu-primary-items .current-menu-item > a:before,
+        #menu-wrapper .menu ul#menu-primary-items .current-menu-ancestor > a:before,
+        #menu-wrapper .menu ul#menu-primary-items .current-menu-parent > a:before {
+          background-color: #4caf50; }
 
   #main {
     width: 100%;
@@ -1381,11 +1410,6 @@ video {
   .container,
   #menu-wrapper {
     width: 960px; }
-
-  #header #branding #site-title a {
-    display: inline; }
-  #header #branding #site-description {
-    display: block; }
 
   #content .article {
     margin-bottom: 1.6em;
