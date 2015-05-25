@@ -2,7 +2,7 @@
 /*
 Theme Name: birdTHERAPY
 Theme URI: http://www.sysbird.jp/birdtherapy/
-Description: BirdSNAP is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
+Description: BirdTHERAPY is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: http://www.sysbird.jp/wptips/
 Version: 1.0
@@ -100,8 +100,10 @@ body {
 -------------------------------------------------------------- */
 body {
 	background-color: $background-color;
+//	background: url("images/bg.jpg") repeat left top;
 	font-family: Verdana,Arial,"メイリオ", Meiryo, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
 	color: $text-color;
+
 
 	* {
 		-webkit-box-sizing: border-box;
@@ -117,7 +119,6 @@ body {
 #header {
 	position: relative;
 	color: $accent-color;
-	border-top: solid 5px $accent-color;
 	padding-top: 2.3em;
 
 	#headerimage {
@@ -130,7 +131,7 @@ body {
 	}
 
 	#branding {
-		padding: 1em 0 1em 64px;
+/*		padding: 1em 0 1em 64px;
 		position: relative;
 
 		&:before {
@@ -138,7 +139,7 @@ body {
 			top: 10px;
 			left: 0;
 			content: "";
-			background: url("images/logo.svg");
+			background: url("images/clover.svg") no-repeat left top;
 			background-size: 100%;
 			width: 64px;
 			height: 64px;
@@ -173,8 +174,23 @@ body {
 			display: none;
 			margin: 0;
 			padding: 0.8em 0 0 0;
+		}  */
+
+		#site-title {
+			margin: 0;
+			padding: 0.8em 0;
+			line-height: 1;
+
+			img {
+				width: 100%;
+				vertical-align:bottom;
+			}
 		}
-	}
+
+		#site-description {
+			display: none;
+		}
+	} 
 
 	a.home {
 		display: none;
@@ -1273,6 +1289,7 @@ video {
 @media screen and (min-width: 660px) {
 
 	#header {
+		border-top: solid 5px $accent-color;
 		padding-top: 0;
 		border-bottom: 0;
 
@@ -1281,6 +1298,7 @@ video {
 		}
 
 		#branding {
+			/*
 			padding: 1.6em 0 1em 100px;
 
 			#site-description {
@@ -1290,6 +1308,13 @@ video {
 			&:before {
 				width: 100px;
 				height: 100px;
+			} */
+			#site-title {
+				padding-bottom: 0;
+
+				img {
+					width: 50%;
+				}
 			}
 		}
 

@@ -2,7 +2,7 @@
 /*
 Theme Name: birdTHERAPY
 Theme URI: http://www.sysbird.jp/birdtherapy/
-Description: BirdSNAP is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
+Description: BirdTHERAPY is a responsive web design theme. Feature fullscreen and parallax custom image, and fixed header. The homepage displays with tagged news and the grid posts. You can choose the text color, link color, header background color by theme options.
 Author: Sysbird
 Author URI: http://www.sysbird.jp/wptips/
 Version: 1.0
@@ -126,7 +126,6 @@ body {
 #header {
   position: relative;
   color: #4caf50;
-  border-top: solid 5px #4caf50;
   padding-top: 2.3em; }
   #header #headerimage {
     margin: 0 0 0.8em 0; }
@@ -134,36 +133,59 @@ body {
       width: 100%;
       vertical-align: bottom; }
   #header #branding {
-    padding: 1em 0 1em 64px;
-    position: relative; }
-    #header #branding:before {
-      position: absolute;
-      top: 10px;
-      left: 0;
-      content: "";
-      background: url("images/logo.svg");
-      background-size: 100%;
-      width: 64px;
-      height: 64px; }
-    #header #branding a {
-      color: #4caf50; }
+    /*		padding: 1em 0 1em 64px;
+    		position: relative;
+    
+    		&:before {
+    			position: absolute;
+    			top: 10px;
+    			left: 0;
+    			content: "";
+    			background: url("images/clover.svg") no-repeat left top;
+    			background-size: 100%;
+    			width: 64px;
+    			height: 64px;
+    		}
+    
+    		a {
+    			color: $accent-color;
+    		}
+    
+    		#site-title {
+    			margin: 0;
+    			padding: 0;
+    			font-size: 2.8rem;
+    			font-weight: normal;
+    			line-height: 1;
+    
+    			a {
+    				display: block;
+    
+    				&:hover {
+    					text-decoration: none;
+    				}
+    			}
+    
+    			img {
+    				width: 100%;
+    				vertical-align:bottom;
+    			}
+    		}
+    
+    		#site-description {
+    			display: none;
+    			margin: 0;
+    			padding: 0.8em 0 0 0;
+    		}  */ }
     #header #branding #site-title {
       margin: 0;
-      padding: 0;
-      font-size: 2.8rem;
-      font-weight: normal;
+      padding: 0.8em 0;
       line-height: 1; }
-      #header #branding #site-title a {
-        display: block; }
-        #header #branding #site-title a:hover {
-          text-decoration: none; }
       #header #branding #site-title img {
         width: 100%;
         vertical-align: bottom; }
     #header #branding #site-description {
-      display: none;
-      margin: 0;
-      padding: 0.8em 0 0 0; }
+      display: none; }
   #header a.home {
     display: none; }
 
@@ -1222,17 +1244,27 @@ video {
 /* --- iPad Landscape --- */
 @media screen and (min-width: 660px) {
   #header {
+    border-top: solid 5px #4caf50;
     padding-top: 0;
     border-bottom: 0; }
     #header #headerimage {
       margin: 1.6em 0 0 0; }
     #header #branding {
-      padding: 1.6em 0 1em 100px; }
-      #header #branding #site-description {
-        display: block; }
-      #header #branding:before {
-        width: 100px;
-        height: 100px; }
+      			/*
+      			padding: 1.6em 0 1em 100px;
+      
+      			#site-description {
+      				display: block;
+      			}
+      
+      			&:before {
+      				width: 100px;
+      				height: 100px;
+      			} */ }
+      #header #branding #site-title {
+        padding-bottom: 0; }
+        #header #branding #site-title img {
+          width: 50%; }
     #header a.home {
       display: block;
       position: absolute;
