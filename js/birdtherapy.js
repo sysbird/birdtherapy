@@ -34,7 +34,7 @@ jQuery(function() {
 		}
 
 		// Header Slider
-		jQuery( '.slider' ).birdfield_Slider();
+		jQuery( '.slider[data-interval]' ).birdfield_Slider();
 
 	});
 

@@ -21,6 +21,8 @@ $link-color: #085483;
 $second-background-color: #f8f8f4;
 $accent-color: #d24e1d;
 $accent-color: #009688;
+$accent-color:#24b37e;
+$accent-2-color:#ffb900;
 $border-color: #e7e7e7;
 $meta-color: #a09b64;
 $line-height: 1.7;
@@ -273,7 +275,7 @@ body {
 #content {
 	width: 100%;
 	.container {
-		padding-bottom: #{$line-height *2}rem;
+		margin-bottom: #{$line-height *2}rem;
 	}
 }
 
@@ -497,15 +499,15 @@ html, body {
 	position: relative;
 
 	.entry-title {
-		color: $accent-color;
 		font-size: 2rem;
 		font-weight: normal;
 		margin: 0 0 #{$line-height /8}em 0;
 		line-height: 1.4;
 		padding: 0;
 
+		&,
 		a {
-			color: $text-color;
+			color: $accent-color;
 		}
 	}
 
@@ -1082,7 +1084,7 @@ div.wpcf7-validation-errors {
 .home {
 	#content {
 		.container {
-			padding-bottom: #{$line-height}rem;
+			margin-bottom: #{$line-height}rem;
 		}
 	}
 
@@ -1106,7 +1108,7 @@ div.wpcf7-validation-errors {
 		@include clearfix;
 
 		&#news,
-		&#profile {
+		&#reserve {
 			background-color: $second-background-color;
 		}
 	}
@@ -1486,36 +1488,35 @@ ul.book-meta {
 	}
 }
 
-/* photos slide
+/* clip circle
 --------------------------------------------- */
-.setos-photos-cover {
-	cursor: pointer;
+.image_clip {
+	position: relative;
+	width: 240px;
+	height: 0;
+	padding-top: 240px;
 }
 
-.setos-photos-slide {	
-	a[ data-fancybox="setos-photos-slide"] {
-		display: none;
-	}
-	}
+.inner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
 
-.setos-photos-slide-start {
+.image_clip:after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
 	display: block;
-	padding: #{$line-height /4}rem 0 #{$line-height}rem;
-
-	&:before {
-		@include font-awesome();
-		content: "\f054";
-		padding-right: #{$line-height /8}rem;
-	}
+	content: '';
+	width: 100%;
+	height: 0;
+	padding-top: 100%;
+	background: url("images/mask_1.svg") no-repeat center bottom / contain;
 }
 
-/* Japanese Font
---------------------------------------------- */
-.single.ja .entry-title,
-.page.ja .entry-title,
-.ja .content-title {
-	font-family: 'Open Sans', 'Sawarabi Mincho', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', YuGothic, 'Yu Gothic', Meiryo, 'MS PGothic';
-}
 
 /* Media queries for responsive design
 --------------------------------------------- */
@@ -1621,8 +1622,7 @@ ul.book-meta {
 			width: 400px;
 			margin-right: 3%;
 
-			.entry-eyecatch img,
-			.setos-photos-slide img {
+			.entry-eyecatch img {
 				border: solid 1px $border-color;
 			}
 		}

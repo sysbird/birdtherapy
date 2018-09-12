@@ -1,0 +1,11 @@
+<svg id="レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>circle-1</title>
+  <path class="cls-1" d="M0,1V501H500V252c0,134-111,243-247,243S6,385,6,252,117,9,253,9,500,118,500,252V1Z" transform="translate(0 -1)"/>
+</svg>
