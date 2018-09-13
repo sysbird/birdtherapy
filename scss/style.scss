@@ -19,13 +19,12 @@ $background-color: #FFF;
 $text-color: #151515;
 $link-color: #085483;
 $second-background-color: #f8f8f4;
-$accent-color: #d24e1d;
-$accent-color: #009688;
 $accent-color:#24b37e;
 $accent-2-color:#ffb900;
 $border-color: #e7e7e7;
 $meta-color: #a09b64;
 $line-height: 1.7;
+
 /*------------------------------
 Font Awesome
 -----------------------------*/
@@ -262,8 +261,8 @@ body {
 
 .container {
 	width: 96%;
-	margin: 0 auto;
 	padding: 0;
+	margin: 0 auto;
 	position: relative;
 	@include pie-clearfix;
 }
@@ -274,8 +273,9 @@ body {
 
 #content {
 	width: 100%;
+
 	.container {
-		margin-bottom: #{$line-height *2}rem;
+		margin: #{$line-height}rem auto;
 	}
 }
 
@@ -386,7 +386,7 @@ html, body {
 				height: 2px;
 				-webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 				transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-				background-color: $text-color;
+				background-color: $accent-color;
 			}
 
 			&:before,
@@ -411,13 +411,13 @@ html, body {
 			}
 
 			&:before {
-			-webkit-transform: rotate(45deg);
-			transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
 			}
 			
 			&:after {
-			-webkit-transform: rotate(-45deg);
-			transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
 			}
 		}
 	}
@@ -432,24 +432,14 @@ html, body {
 			margin: 0;
 			padding: 0;
 
-			&.language {
-				> a {
-					pointer-events: none;
-				}
-
-				.current {
-					font-weight: bold;
-				}
-			}
-
 			a,
 			span {
 				padding: #{$line-height /2}rem;
 				display: block;
-				color: $text-color;
+				color: $accent-color;
 				text-decoration: none;
 				line-height: 1.2;
-				border-top: dotted 1px $text-color;
+				border-top: solid 1px $accent-color;
 			}
 
 			span {
@@ -461,10 +451,6 @@ html, body {
 	.current-menu-item > a,
 	.current-menu-ancestor > a {
 		font-weight: bold;
-	}
-
-	ul.bogo-language-switcher {
-		display: none;
 	}
 }
 
@@ -913,15 +899,11 @@ div.wpcf7-validation-errors {
 	position: relative;
 	z-index: 1;
 
-	&,
-	a {
-		color: $accent-color;
-	}
-
 	.site-title {
 		padding: #{$line-height /2}em 0;
 		line-height: 1.4;
 		background: $accent-color;
+		text-align: center;
 
 		&,
 		a {
@@ -970,11 +952,12 @@ div.wpcf7-validation-errors {
 /* Widget
 --------------------------------------------- */
 #widget-area {
-	padding: 0;
+	
+	margin: #{$line-height}rem auto;
 	@include clearfix;
 
 	.widget {
-		margin: 20px 0;
+		margin-bottom: #{$line-height}em;
 		width: 100%;
 
 		a {
@@ -1045,18 +1028,20 @@ div.wpcf7-validation-errors {
 #searchform {
 	width: 100%;
 	position: relative;
-	border: solid 1px $text-color;
-	padding: 1%;
+	border: solid 1px $accent-color;
+	padding: 5px;
 	border-radius: 4px;
 	background: #FFF;
 	max-width: 500px;
 	@include display-flex();
 
 	#s {
-		padding: 5px 10px 5px 5px;
+		padding: 0;
+		margin: 0;
 		line-height: 1;
 		border: none;
 		font-size: inherit;
+		color: $accent-color;
 		@include flex(1);
 	}
 
@@ -1066,7 +1051,7 @@ div.wpcf7-validation-errors {
 		width: 20%;
 		margin: 0;
 		background: #FFF;
-		color: $text-color;
+		color: $accent-color;
 		-webkit-appearance: button;
 		font-size: inherit;
 		text-align: right;
@@ -1082,12 +1067,6 @@ div.wpcf7-validation-errors {
 /* Home
 --------------------------------------------- */
 .home {
-	#content {
-		.container {
-			margin-bottom: #{$line-height}rem;
-		}
-	}
-
 	.content-title {
 		color: $accent-color;
 		font-size: 2rem;
@@ -1104,7 +1083,6 @@ div.wpcf7-validation-errors {
 		background: $background-color;
 		z-index: 1;
 		position: relative;
-		padding-top: #{$line-height}rem;
 		@include clearfix;
 
 		&#news,
@@ -1436,87 +1414,60 @@ ul.archive {
 	}
 }
 
-/* biography in Profile
+/* mask image
 --------------------------------------------- */
-ul.biography {
-	list-style: none;
-	margin-left: 0;
-	@include clearfix;
-
-	li {
-		text-indent: -4.8em;
-		padding-left: 4em;
-
-		strong {
-			padding-right: 1em;
-			font-weight: normal;
-
-			&:before {
-				@include font-awesome();
-				content: "\f0da";
-				display: inline;
-				padding-right: #{$line-height /8}em;
-				color: $link-color;
-			}
-		}
-	}
-}
-
-ul.book-meta {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-
-	li {
-		padding: 0em 0 0.6em 0.6em;
-		text-indent: -0.3em;
-		border: none;
-
-		&:before {
-			@include font-awesome();
-			content: "\f069";
-			padding-right: 0.6em;
-			font-size: 0.6em;
-			color: $link-color;
-		}
-	}
-}
-
-.single-book {
-	ul.book-meta {
-		margin-bottom: #{$line-height}rem;
-	}
-}
-
-/* clip circle
---------------------------------------------- */
-.image_clip {
+.image_egg {
 	position: relative;
-	width: 240px;
-	height: 0;
-	padding-top: 240px;
-}
-
-.inner {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.image_clip:after {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	display: block;
-	content: '';
 	width: 100%;
 	height: 0;
 	padding-top: 100%;
-	background: url("images/mask_1.svg") no-repeat center bottom / contain;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		max-width: none;
+
+		top: 50%;
+		left: 50%;
+		@include translate( -50%, -50% );
+	}
+
+	&:after {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 0;
+		padding-top: 100%;
+		background: url("images/egg_1.svg") no-repeat center bottom / contain;
+	}
+
+	&.egg_2:after {
+		background-image: url("images/egg_2.svg");
+	}
+
+	&.egg_3:after {
+		background-image: url("images/egg_3.svg");
+	}
 }
 
+/* two column article
+--------------------------------------------- */
+.two-columns {
+	.sub-column {
+		margin-bottom: #{$line-height}rem;
+
+		img {
+			margin: 0 auto;
+		}
+	}
+}
 
 /* Media queries for responsive design
 --------------------------------------------- */
@@ -1608,8 +1559,18 @@ ul.book-meta {
 		}
 	}
 
-	ul.biography {
-		margin-left: 1em;
+	.two-columns {
+		@include display-flex();
+
+		.sub-column {
+			width: 35%;
+			margin-bottom: 0;
+			margin-right: #{$line-height}rem;
+		}
+
+		.main-column {
+			width: 65%;
+		}
 	}
 }
 
@@ -1691,13 +1652,6 @@ ul.book-meta {
 							height: 60px;
 							padding: 20px #{$line-height /2}rem;
 						}
-
-						&.language {
-							> a {
-								padding-left: 0;
-								padding-right: 0;
-							}
-						}
 					}
 
 					li ul {
@@ -1733,17 +1687,6 @@ ul.book-meta {
 				a,
 				span {
 					border-top: none;
-				}
-
-				&.language {
-					> a {
-						background: url("images/language.svg") no-repeat left center/ 200%;
-						padding-left: 0;
-						padding-right: 0;
-						width: 16px;	
-						text-indent: -119988px;
-						text-align: left;
-					}
 				}
 
 				&.menu-item-has-children {
@@ -1784,20 +1727,15 @@ ul.book-meta {
 						span {
 							padding: 0.8em;
 							background-color: #FFF;
-							border-right: solid 1px $text-color;
-							border-left: solid 1px $text-color;
-							border-bottom: solid 1px $text-color;
+							border-right: solid 1px $accent-color;
+							border-left: solid 1px $accent-color;
+							border-bottom: solid 1px $accent-color;
 							height: auto;
 							white-space: normal;
-
-							&:hover {
-								text-decoration: none;
-								border-color: $text-color;
-							}
 						}
 
 						&:first-child {
-							border-top: solid 1px $text-color;
+							border-top: solid 1px $accent-color;
 						}
 
 						ul {
@@ -1895,7 +1833,7 @@ ul.book-meta {
 	#widget-area {
 		.widget {
 			width: 290px;
-			margin: 20px 10px;
+			margin: 0 10px;
 			float: left;
 		}
 	}

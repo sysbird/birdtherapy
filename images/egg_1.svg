@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #fffdfd;
+      }
+    </style>
+  </defs>
+  <title>egg_1</title>
+  <g id="レイヤー_3" data-name="レイヤー 3">
+    <g>
+      <path class="cls-1" d="M1,273C1,135,75,0,213,0H0V500H256C118,500,1,411,1,273Z"/>
+      <path class="cls-1" d="M256,500H500V234C500,372,394,500,256,500Z"/>
+      <path class="cls-2" d="M213,0C351,0,500,96,500,234V0Z"/>
+    </g>
+  </g>
+</svg>
