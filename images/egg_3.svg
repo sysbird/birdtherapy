@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <title>egg_3</title>
-  <g id="レイヤー_3" data-name="レイヤー 3">
-    <path class="cls-1" d="M255,1C384,1,484,91,496,226S379,529,245,494C126,464-7,402,3,272S85,1,255,1H0V501H500V1Z" transform="translate(0 -1)"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<title>egg_3</title>
+<g id="レイヤー_3">
+	<path class="st0" d="M245,500C116,500,16,410,4,275S137-6,255,7c122,13.4,246.1,91.7,242,222C492,387,415,500,245,500h255V0L0,0
+		l0,500H245z"/>
+</g>
 </svg>

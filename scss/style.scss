@@ -327,7 +327,7 @@ html, body {
 	#branding {
 
 		#site-title {
-			margin: 0 1em 0 0;
+			margin: 0;
 			padding: 0;
 			font-size: 2rem;
 			font-weight: normal;
@@ -1373,7 +1373,7 @@ ul.archive {
 --------------------------------------------- */
 #wall {
 	height: 0;
-	margin: 0;
+	margin-bottom: #{$line-height /2}rem;
 	width: 100%;
 	padding-top: (960 / 1280) *100%;
 	position: relative;
@@ -1412,6 +1412,18 @@ ul.archive {
 	&.no-image {
 		padding-top: 0;
 	}
+
+	&:after {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 0;
+		padding-top: (960 / 1280) *100%;
+		background: url("images/wall.svg") no-repeat center bottom / contain;
+	}
 }
 
 /* mask image
@@ -1430,7 +1442,6 @@ ul.archive {
 		bottom: 0;
 		left: 0;
 		max-width: none;
-
 		top: 50%;
 		left: 50%;
 		@include translate( -50%, -50% );
@@ -1454,6 +1465,14 @@ ul.archive {
 
 	&.egg_3:after {
 		background-image: url("images/egg_3.svg");
+	}
+
+	&.egg_4:after {
+		background-image: url("images/egg_4.svg");
+	}
+
+	&.egg_5:after {
+		background-image: url("images/egg_5.svg");
 	}
 }
 
@@ -1561,6 +1580,7 @@ ul.archive {
 
 	.two-columns {
 		@include display-flex();
+		align-items: center;
 
 		.sub-column {
 			width: 35%;
@@ -1613,15 +1633,15 @@ ul.archive {
 	}
 
 	#header {
-		position: fixed;
-		top: 0;
+/*		position: fixed;
+		top: 0; */
 		transition-property:min-height;
 		transition-duration:.3s;
 		min-height: 80px;
 
 		#branding {
-			padding-top: 15px;
-			float: left;
+			padding-top: #{$line-height}rem;
+			text-align: center;
 
 			#site-title {
 				a {
@@ -1673,7 +1693,7 @@ ul.archive {
 		ul#menu-primary-items {
 			/* ensure .menu is visible on desktop version */
 			display: block !important;
-			text-align: right;
+			text-align: center;
 
 			li {
 				display: inline-block;
@@ -1702,7 +1722,7 @@ ul.archive {
 					padding: 0;
 					width: 200px;
 					position: absolute;
-					top: 80px;
+					top: 60px;
 					left: 0;
 					text-align: left;
 					z-index: 9999;
@@ -1748,8 +1768,8 @@ ul.archive {
 
 			>li {
 				>a {
-					padding: 30px #{$line-height /2}rem;
-					height: 80px;
+					padding: 20px #{$line-height}rem;
+					height: 60px;
 				}
 			}
 		}
@@ -1839,14 +1859,13 @@ ul.archive {
 	}
 
 	#wall {
+		width: 930px;
 		padding-top: 698px;
-		padding-bottom: 40px;
+		margin: 0 auto #{$line-height}rem auto;
 
 		.headerimage {
-			max-width: 930px;
-			margin: 0 auto;
-
 			.fixedimage {
+				width: 930px;
 				padding-top: 698px;
 			}
 		}
@@ -1855,7 +1874,7 @@ ul.archive {
 	body.home #wall,
 	body:not(.home) #content,
 	body.home.paged  #content {
-		margin-top: 80px;
+//		margin-top: 80px;
 	}
 }
 
