@@ -2,82 +2,84 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" >
-<meta name="viewport" content="width=device-width" >
-<title>BirdTHERAPY | Demo of the WordPress Theme</title>
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.js"></script>
-<![endif]-->
-<link rel='stylesheet' href='style.css?ver=3.5.1' type='text/css' media='all' />
-<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.6.1'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BirdTHERAPY &#8211; さんぷるページ</title>
+<meta name='robots' content='noindex,follow' />
+<link rel='stylesheet' id='birdtherap-css'  href='style.css?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='js/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript' src='js/birdtherapy.js?ver=1.02'></script>
+<style>
+	a {
+		pointer-events: none;
+	}
+</style>
 </head>
 <body class="single blog custom-background">
 
 <div class="wrapper">
 	<header id="header">
 		<div class="container">
-			<div id="branding" class="logo">
-			<!--
-				<h1 id="site-title"><a href="#header" title="BirdMENU" rel="home">佐々木鍼灸院</a></h1> -->
-				<div id="site-title"><a href="#" title="BirdMENU" rel="home">BirdTHERAPY</a></div>
-				<p id="site-description">サイトの説明が少し・テキストで入るかんじです</p>
+			<div id="branding">
+				<h1 id="site-title"><a href="#" title="BirdMENU" rel="home">BirdTHERAPY</a></h1>
+				<p id="site-description">the Global Navigation</p>
 			</div>
-			<a class="home" href="#">ホームに戻る</a>
-		</div>
 
-		<nav id="menu-wrapper">
-			<div class="menu"><div id="small-menu">Menu</div>
-<ul class="nav container-inner group" id="menu-primary-items"><li class="about menu-item menu-item-type-custom menu-item-object-custom current_page_item menu-item-home menu-item-304" id="menu-item-304"><a href="#">ホーム</a></li>
-<li class="aroma menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-306" id="menu-item-306"><a href="#">お知らせ</a>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-311" id="menu-item-311"><a href="#">[レベル2]サンプルページサンプルページサンプルページサンプルページサンプルページサンプルページ</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305"><a href="#">[レベル3]サンプルページ</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312" id="menu-item-312"><a href="#">サンプルページ</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312" id="menu-item-312"><a href="#">サンプルページサンプルページサンプルページサンプルページサンプルページ</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312 menu-item-has-children" id="menu-item-312"><a href="#">サンプルページ</a>
-	<ul class="sub-menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305 menu-item-has-children" id="menu-item-305"><a href="#">[レベル3]サンプルページ</a>
-			<ul class="sub-menu">
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305"><a href="#">[レベル4]</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305"><a href="#">[レベル4]</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305"><a href="#">[レベル4]</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305 menu-item-has-children" id="menu-item-305"><a href="#">[レベル4]サンプルページ</a>
-					<ul class="sub-menu">
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305 " id="menu-item-305"><a href="#">[レベル5]ページ</a></li>
+			<nav id="menu-wrapper">
+				<div class="menu">
+					<button id="small-menu" type="button"><span class="icon"></span></button>
+					<ul id="menu-primary-items" class="">
+						<li class="about menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-304"><a href="#">ホーム</a></li>
+						<li class="aroma menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-306" ><a href="#">お知らせ</a>
+							<ul class="sub-menu">
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-311"><a href="#">[レベル2]サンプルページサンプルページサンプルページサンプルページサンプルページサンプルページ</a>
+									<ul class="sub-menu">
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a href="#">[レベル3]サンプルページ</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312"><a href="#">サンプルページ</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312"><a href="#">サンプルページサンプルページサンプルページサンプルページサンプルページ</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312 menu-item-has-children"><a href="#">サンプルページ</a>
+									<ul class="sub-menu">
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305 menu-item-has-children"><a href="#">[レベル3]サンプルページ</a>
+											<ul class="sub-menu">
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a href="#">[レベル4]</a></li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-page 	menu-item-305"><a href="#">[レベル4]</a></li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a href="#">[レベル4]</a></li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305 menu-item-has-children"><a href="#">[レベル4]サンプルページ</a>
+													<ul class="sub-menu">
+														<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305 "><a href="#">[レベル5]ページ</a></li>
+													</ul>
+												</li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a href="#">[レベル4]サンプルページ</a></li>
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a href="#">[レベル4]サンプルページ</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312"><a href="#">サンプルページ</a></li>
+							</ul>
+						</li>
+						<li class="lymph menu-item menu-item-type-custom menu-item-object-custom menu-item-308"><a href="#">アクセス</a></li>
+						<li class="reservation menu-item menu-item-type-custom menu-item-object-custom menu-item-309"><a href="#">お問い合わせ</a></li>
+						<li class="access menu-item menu-item-type-custom menu-item-object-custom menu-item-309"><a href="#">アーカイブ</a></li>
 					</ul>
-				</li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305"><a href="#">[レベル4]サンプルページ</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305"><a href="#">[レベル4]サンプルページ</a></li>
-			</ul>
-		</li>
-	</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312" id="menu-item-312"><a href="#">サンプルページ</a></li>
-</ul>
-</li>
-<li class="lymph menu-item menu-item-type-custom menu-item-object-custom menu-item-308" id="menu-item-308"><a href="#">アクセス</a></li>
-<li class="reservation menu-item menu-item-type-custom current-menu-item menu-item-object-custom menu-item-309" id="menu-item-309"><a href="#">お問い合わせ</a></li>
-<li class="access menu-item menu-item-type-custom menu-item-object-custom menu-item-309" id="menu-item-309"><a href="#">アーカイブ</a></li>
-</ul>
-</div>
-		</nav>
-
+				</div>
+			</nav>
+		</div>
 	</header>
 
-	<div class="container">
-		<div id="main">
-		<div id="content">
+	<div id="content">
+		<div class="bread_crumb_wrapper">
+		<ul class="bread_crumb container">
+			<li class="level-1 top"><a href="http://sasaki-harikyu.com/">トップページ</a></li>
+			<li class="level-2 sub tail current">リンパ浮腫治療室</li>
+		</ul>
+		</div>
+
+		<div class="container">
 
 <article id="post-1178" class="post-1178 post type-post status-publish format-standard hentry category-markup tag-content-2 tag-css tag-formatting-2 tag-html tag-markup-2 article">
 
-	<ul class="bread_crumb">
-		<li class="level-1 top"><a href="http://sasaki-harikyu.com/">トップページ</a></li>
-		<li class="level-2 sub tail current">リンパ浮腫治療室</li>
-	</ul>
 
 		<header class="entry-header">
 			<h1 class="entry-title">Markup: HTML Tags and Formatting</h1>
@@ -178,263 +180,17 @@
 	</div>
 
 	</article>
-
-		</div><!-- #content -->
-		</div><!-- #main -->
-
-		<div id="sidebar">
-			<div class="menu-side-aroma-container">
-				<ul class="nav widget" id="menu-side-aroma-1">
-					<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-105 current_page_item menu-item-has-children menu-item-185"><a href="">サブメニュー</a>
-					<ul class="sub-menu">
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192"><a href="#">メニュー標題</a></li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="#">メニューの対象となる標題</a></li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="#">メニューについて</a></li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="#">メニューを受けた後の注意</a></li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391 current-menu-item"><a href="#">新宿在住の方が使える特典・西新宿在住の方が使える特典</a></li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a href="#">料金表</a></li>
-
-					</ul>
-					</li>
-				</ul>
-			</div>
-
-			<div class="widget">
-				<h3>Tags</h3><div class="tagcloud"><a href='#' class='tag-link-67' title='1 topic' style='font-size: 8pt;'>8BIT</a>
-				<a href='#' class='tag-link-68' title='3 topics' style='font-size: 12.5161290323pt;'>alignment</a>
-				<a href='#' class='tag-link-69' title='1 topic' style='font-size: 8pt;'>Articles</a>
-				<a href='#' class='tag-link-70' title='1 topic' style='font-size: 8pt;'>aside</a>
-				<a href='#' class='tag-link-71' title='1 topic' style='font-size: 8pt;'>audio</a>
-				<a href='#' class='tag-link-72' title='2 topics' style='font-size: 10.7096774194pt;'>captions</a>
-				<a href='#' class='tag-link-73' title='2 topics' style='font-size: 10.7096774194pt;'>categories</a>
-				<a href='#' class='tag-link-74' title='2 topics' style='font-size: 10.7096774194pt;'>chat</a>
-				<a href='#' class='tag-link-78' title='3 topics' style='font-size: 12.5161290323pt;'>Codex</a>
-				<a href='#' class='tag-link-79' title='4 topics' style='font-size: 14.0215053763pt;'>comments</a>
-				<a href='#' class='tag-link-80' title='12 topics' style='font-size: 20.1935483871pt;'>content</a>
-				<a href='#' class='tag-link-82' title='7 topics' style='font-size: 17.0322580645pt;'>css</a>
-				<a href='#' class='tag-link-86' title='1 topic' style='font-size: 8pt;'>dowork</a>
-				<a href='#' class='tag-link-87' title='8 topics' style='font-size: 17.7849462366pt;'>edge case</a>
-				<a href='#' class='tag-link-88' title='4 topics' style='font-size: 14.0215053763pt;'>embeds</a>
-				<a href='#' class='tag-link-92' title='3 topics' style='font-size: 12.5161290323pt;'>excerpt</a>
-				<a href='#' class='tag-link-93' title='1 topic' style='font-size: 8pt;'>Fail</a>
-				<a href='#' class='tag-link-94' title='3 topics' style='font-size: 12.5161290323pt;'>featured image</a>
-				<a href='#' class='tag-link-97' title='1 topic' style='font-size: 8pt;'>formatting</a>
-				<a href='#' class='tag-link-98' title='1 topic' style='font-size: 8pt;'>FTW</a>
-				<a href='#' class='tag-link-99' title='1 topic' style='font-size: 8pt;'>Fun</a>
-				<a href='#' class='tag-link-100' title='3 topics' style='font-size: 12.5161290323pt;'>gallery</a>
-				<a href='#' class='tag-link-106' title='5 topics' style='font-size: 15.2258064516pt;'>html</a>
-				<a href='#' class='tag-link-107' title='7 topics' style='font-size: 17.0322580645pt;'>image</a>
-				<a href='#' class='tag-link-110' title='3 topics' style='font-size: 12.5161290323pt;'>jetpack</a>
-				<a href='#' class='tag-link-112' title='4 topics' style='font-size: 14.0215053763pt;'>layout</a>
-				<a href='#' class='tag-link-113' title='2 topics' style='font-size: 10.7096774194pt;'>link</a>
-				<a href='#' class='tag-link-114' title='1 topic' style='font-size: 8pt;'>lists</a>
-				<a href='#' class='tag-link-116' title='1 topic' style='font-size: 8pt;'>Love</a>
-				<a href='#' class='tag-link-117' title='6 topics' style='font-size: 16.2795698925pt;'>markup</a>
-				<a href='#' class='tag-link-118' title='1 topic' style='font-size: 8pt;'>media</a>
-				<a href='#' class='tag-link-123' title='1 topic' style='font-size: 8pt;'>Mothership</a>
-				<a href='#' class='tag-link-124' title='1 topic' style='font-size: 8pt;'>Must Read</a>
-				<a href='#' class='tag-link-125' title='1 topic' style='font-size: 8pt;'>Nailed It</a>
-				<a href='#' class='tag-link-127' title='1 topic' style='font-size: 8pt;'>pagination</a>
-				<a href='#' class='tag-link-38' title='16 topics' style='font-size: 22pt;'>Post Formats</a>
-				<a href='#' class='tag-link-140' title='2 topics' style='font-size: 10.7096774194pt;'>quote</a>
-				<a href='#' class='tag-link-146' title='6 topics' style='font-size: 16.2795698925pt;'>shortcode</a>
-				<a href='#' class='tag-link-148' title='2 topics' style='font-size: 10.7096774194pt;'>standard</a>
-				<a href='#' class='tag-link-160' title='11 topics' style='font-size: 19.7419354839pt;'>template</a>
-				<a href='#' class='tag-link-165' title='5 topics' style='font-size: 15.2258064516pt;'>title</a>
-				<a href='#' class='tag-link-167' title='2 topics' style='font-size: 10.7096774194pt;'>twitter</a>
-				<a href='#' class='tag-link-170' title='3 topics' style='font-size: 12.5161290323pt;'>video</a>
-				<a href='#' class='tag-link-171' title='2 topics' style='font-size: 10.7096774194pt;'>videopress</a>
-				<a href='#' class='tag-link-174' title='2 topics' style='font-size: 10.7096774194pt;'>wordpress.tv</a></div>
-			</div>
-
-			<div class="widget">
-				<h3>Recent Comments</h3>
-				<ul id="recentcomments"><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>Chris Ames</a> on <a href="#">Edge Case: No Content</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>Tom McFarlin</a> on <a href="#">Protected: Template: Password Protected (the password is &#8220;enter&#8221;)</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>Michael Novotny</a> on <a href="#">Template: Comments</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>8BIT</a> on <a href="#">Template: Comments</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>WP Daily</a> on <a href="#">Template: Comments</a></li></ul>
-			</div>
-
-			<div class="widget">
-				<h3>BirdMAGAZINEのテーマ</h3>
-				<div class="textwidget"><p><strong> BirdMAGAZINE</strong>は、フレキシブルザインの2カラムブログテーマです。jQuery Masonryによるグリッドレイアウトを備えています。またレスポンシブWebデザインですので、PCのほかタブレット、スマートフォンで見ることができます。テーマカスタマイズではテキストの色、リンクの色、ヘッダーライン色とフッター背景色、ナビゲーション色を選択することができます。ぜひお試しください！<br>
-				<a href="#">»ダウンロード</a></p>
-				<p>sysbirdこと鳥山本舗</p>
-				</div>
-			</div>
-
-			<div class="widget">
-				<form role="search" action="#" class="searchform" id="searchform" method="get">
-				<label class="screen-reader-text" for="s">Search</label>
-				<input type="search" placeholder="Search …" id="s" value="" name="s" class="field">
-				<input type="submit" value="&#xf002;" id="searchsubmit" class="submit">
-				</form>
-			</div>
-
-		</div><!-- #sideabar -->
-	</div><!-- .container -->
+		</div>
+	</div><!-- #content -->
 
 	<footer id="footer">
-		<section id="widget-area">
-			<div class="container">
-
-				<div class="widget">
-					<h3>Calendar</h3>
-					<div id="calendar_wrap"><table id="wp-calendar">
-					<caption>November 2013</caption>
-					<thead>
-					<tr>
-						<th scope="col" title="Monday">M</th>
-						<th scope="col" title="Tuesday">T</th>
-						<th scope="col" title="Wednesday">W</th>
-						<th scope="col" title="Thursday">T</th>
-						<th scope="col" title="Friday">F</th>
-						<th scope="col" title="Saturday">S</th>
-						<th scope="col" title="Sunday">S</th>
-					</tr>
-					</thead>
-
-					<tfoot>
-					<tr>
-						<td colspan="3" id="prev"><a href="#" title="View posts for June 2013">&laquo; Jun</a></td>
-						<td class="pad">&nbsp;</td>
-						<td colspan="3" id="next" class="pad">&nbsp;</td>
-					</tr>
-					</tfoot>
-
-					<tbody>
-					<tr>
-						<td colspan="4" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td>
-					</tr>
-					<tr>
-						<td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td><a href="#">9</a></td><td>10</td>
-					</tr>
-					<tr>
-						<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
-					</tr>
-					<tr>
-						<td id="today">18</td><td><a href="#">19</a></td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
-					</tr>
-					<tr>
-						<td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
-						<td class="pad" colspan="1">&nbsp;</td>
-					</tr>
-					</tbody>
-					</table>
-					</div>
-				</div>
-
-				<div class="widget">
-					<h3>Tags</h3><div class="tagcloud"><a href='#' class='tag-link-67' title='1 topic' style='font-size: 8pt;'>8BIT</a>
-					<a href='#' class='tag-link-68' title='3 topics' style='font-size: 12.5161290323pt;'>alignment</a>
-					<a href='#' class='tag-link-69' title='1 topic' style='font-size: 8pt;'>Articles</a>
-					<a href='#' class='tag-link-70' title='1 topic' style='font-size: 8pt;'>aside</a>
-					<a href='#' class='tag-link-71' title='1 topic' style='font-size: 8pt;'>audio</a>
-					<a href='#' class='tag-link-72' title='2 topics' style='font-size: 10.7096774194pt;'>captions</a>
-					<a href='#' class='tag-link-73' title='2 topics' style='font-size: 10.7096774194pt;'>categories</a>
-					<a href='#' class='tag-link-74' title='2 topics' style='font-size: 10.7096774194pt;'>chat</a>
-					<a href='#' class='tag-link-78' title='3 topics' style='font-size: 12.5161290323pt;'>Codex</a>
-					<a href='#' class='tag-link-79' title='4 topics' style='font-size: 14.0215053763pt;'>comments</a>
-					<a href='#' class='tag-link-80' title='12 topics' style='font-size: 20.1935483871pt;'>content</a>
-					<a href='#' class='tag-link-82' title='7 topics' style='font-size: 17.0322580645pt;'>css</a>
-					<a href='#' class='tag-link-86' title='1 topic' style='font-size: 8pt;'>dowork</a>
-					<a href='#' class='tag-link-87' title='8 topics' style='font-size: 17.7849462366pt;'>edge case</a>
-					<a href='#' class='tag-link-88' title='4 topics' style='font-size: 14.0215053763pt;'>embeds</a>
-					<a href='#' class='tag-link-92' title='3 topics' style='font-size: 12.5161290323pt;'>excerpt</a>
-					<a href='#' class='tag-link-93' title='1 topic' style='font-size: 8pt;'>Fail</a>
-					<a href='#' class='tag-link-94' title='3 topics' style='font-size: 12.5161290323pt;'>featured image</a>
-					<a href='#' class='tag-link-97' title='1 topic' style='font-size: 8pt;'>formatting</a>
-					<a href='#' class='tag-link-98' title='1 topic' style='font-size: 8pt;'>FTW</a>
-					<a href='#' class='tag-link-99' title='1 topic' style='font-size: 8pt;'>Fun</a>
-					<a href='#' class='tag-link-100' title='3 topics' style='font-size: 12.5161290323pt;'>gallery</a>
-					<a href='#' class='tag-link-106' title='5 topics' style='font-size: 15.2258064516pt;'>html</a>
-					<a href='#' class='tag-link-107' title='7 topics' style='font-size: 17.0322580645pt;'>image</a>
-					<a href='#' class='tag-link-110' title='3 topics' style='font-size: 12.5161290323pt;'>jetpack</a>
-					<a href='#' class='tag-link-112' title='4 topics' style='font-size: 14.0215053763pt;'>layout</a>
-					<a href='#' class='tag-link-113' title='2 topics' style='font-size: 10.7096774194pt;'>link</a>
-					<a href='#' class='tag-link-114' title='1 topic' style='font-size: 8pt;'>lists</a>
-					<a href='#' class='tag-link-116' title='1 topic' style='font-size: 8pt;'>Love</a>
-					<a href='#' class='tag-link-117' title='6 topics' style='font-size: 16.2795698925pt;'>markup</a>
-					<a href='#' class='tag-link-118' title='1 topic' style='font-size: 8pt;'>media</a>
-					<a href='#' class='tag-link-123' title='1 topic' style='font-size: 8pt;'>Mothership</a>
-					<a href='#' class='tag-link-124' title='1 topic' style='font-size: 8pt;'>Must Read</a>
-					<a href='#' class='tag-link-125' title='1 topic' style='font-size: 8pt;'>Nailed It</a>
-					<a href='#' class='tag-link-127' title='1 topic' style='font-size: 8pt;'>pagination</a>
-					<a href='#' class='tag-link-38' title='16 topics' style='font-size: 22pt;'>Post Formats</a>
-					<a href='#' class='tag-link-140' title='2 topics' style='font-size: 10.7096774194pt;'>quote</a>
-					<a href='#' class='tag-link-146' title='6 topics' style='font-size: 16.2795698925pt;'>shortcode</a>
-					<a href='#' class='tag-link-148' title='2 topics' style='font-size: 10.7096774194pt;'>standard</a>
-					<a href='#' class='tag-link-160' title='11 topics' style='font-size: 19.7419354839pt;'>template</a>
-					<a href='#' class='tag-link-165' title='5 topics' style='font-size: 15.2258064516pt;'>title</a>
-					<a href='#' class='tag-link-167' title='2 topics' style='font-size: 10.7096774194pt;'>twitter</a>
-					<a href='#' class='tag-link-170' title='3 topics' style='font-size: 12.5161290323pt;'>video</a>
-					<a href='#' class='tag-link-171' title='2 topics' style='font-size: 10.7096774194pt;'>videopress</a>
-					<a href='#' class='tag-link-174' title='2 topics' style='font-size: 10.7096774194pt;'>wordpress.tv</a></div>
-				</div>
-
-				<div class="widget">
-					<h3>Recent Comments</h3>
-					<ul id="recentcomments"><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>Chris Ames</a> on <a href="#">Edge Case: No Content</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>Tom McFarlin</a> on <a href="#">Protected: Template: Password Protected (the password is &#8220;enter&#8221;)</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>Michael Novotny</a> on <a href="#">Template: Comments</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>8BIT</a> on <a href="#">Template: Comments</a></li><li class="recentcomments"><a href='#' rel='external nofollow' class='url'>WP Daily</a> on <a href="#">Template: Comments</a></li></ul>
-				</div>
-
-				<div class="widget">
-					<h3>BirdMAGAZINEのテーマ</h3>
-					<div class="textwidget"><p><strong> BirdMAGAZINE</strong>は、フレキシブルザインの2カラムブログテーマです。jQuery Masonryによるグリッドレイアウトを備えています。またレスポンシブWebデザインですので、PCのほかタブレット、スマートフォンで見ることができます。テーマカスタマイズではテキストの色、リンクの色、ヘッダーライン色とフッター背景色、ナビゲーション色を選択することができます。ぜひお試しください！<br>
-					<a href="#">»ダウンロード</a></p>
-					<p>sysbirdこと鳥山本舗</p>
-					</div>
-				</div>
-
-				<div class="widget">
-					<h3>Categories</h3>
-					<ul>
-					<li class="cat-item cat-item-3"><a href="#" title="View all posts filed under aciform">aciform</a>
-						<ul class="children">
-							<li class="cat-item cat-item-42"><a href="#" title="View all posts filed under sub">sub</a>
-						</li>
-						</ul>
-						</li>
-							<li class="cat-item cat-item-4"><a href="#" title="View all posts filed under antiquarianism">antiquarianism</a>
-						</li>
-							<li class="cat-item cat-item-5"><a href="#&quot;" title="View all posts filed under arrangement">arrangement</a>
-						</li>
-							<li class="cat-item cat-item-6"><a href="#" title="View all posts filed under asmodeus">asmodeus</a>
-						</li>
-					</ul>
-				</div>
-
-<div class="widget">
-<h3>メニュー</h3>
-<div class="menu-longmenu-container"><ul class="menu" id="menu-longmenu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304" id="menu-item-304"><a href="#">ホーム</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-306" id="menu-item-306"><a href="#">メニュー１</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-311" id="menu-item-311"><a href="#">サンプルページ</a>
-	<ul class="sub-menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305"><a href="#">サンプルページ</a></li>
-	</ul>
-</li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312" id="menu-item-312"><a href="#">サンプルページサンプルページサンプルページサンプルページサンプルページサンプルページサンプルページ</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-307" id="menu-item-307"><a href="#">メニュー２</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-308" id="menu-item-308"><a href="#">メニュー３</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309" id="menu-item-309"><a href="#">メニュー４</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-310" id="menu-item-310"><a href="#">メニュー5</a></li>
-</ul></div>
-</div>
-			</div>
-		</section>
-
 		<div class="container">
-
-			<p class="blanding">the Global Navigation<br>
-				<span class="site-title">BirdTHERAPY</span><br>
+			<p class="copyright">
+				&copy;  2018 Sasaki Acupuncture Treatment and Massage Therapy Center.
 			</p>
-
-			<div class="copyright">
-				&copy;  2015 Sasaki Acupuncture Treatment and Massage Therapy Center All Rights Reserved. <br>
-			</div>
 		</div>
-		<p id="back-top"><a href="#top"><span>top</span></a></p>
+		<p id="back-top"><a href="#top"><span>ページトップへ</span></a></p>
 	</footer>
-
 </div><!-- wrapper -->
 
 </body>

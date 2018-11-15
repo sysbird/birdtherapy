@@ -4,37 +4,8 @@ jQuery(function() {
 
 	jQuery( window ).load(function() {
 
-		// home grid
-		jQuery( "ul.tile li" ).tile( 3 );
-
-		// Browser supports matchMedia
-		if ( window.matchMedia ) {
-			// MediaQueryList
-			var mq = window.matchMedia( "( min-width: 930px )" );
-
-			// MediaQueryListListener
-			var birdfieldHeightCheck = function ( mq ) {
-				if ( mq.matches ) {
-					// tile for home
-					jQuery( "ul.tile li" ).tile(3);
-				}
-				else {
-					// cansel
-					jQuery( 'ul.tile li' ).css( 'height', 'auto' );
-				}
-			};
-
-			// Add listener HeightChec
-			mq.addListener( birdfieldHeightCheck );
-			birdfieldHeightCheck( mq );
-		}
-		else {
-			// Browser doesn't support matchMedia
-			jQuery( "ul.tile li" ).tile( 3 );
-		}
-
 		// Header Slider
-		jQuery( '.slider[data-interval]' ).birdfield_Slider();
+		jQuery( '.slider[data-interval]' ).birdtherapy_Slider();
 
 	});
 
@@ -53,14 +24,11 @@ jQuery(function() {
 		if ( scrollTop > 800 ) totop.fadeIn(); else totop.fadeOut();
 
 		// mini header with scroll
-		var header_clip = jQuery( '#header' ).css( 'clip' );
-		if( -1 == header_clip.indexOf( 'rect' ) ) {
-			if ( scrollTop > 200 ) {
-				jQuery('.wrapper:not(.many-navigation) #header').addClass('mini');
-			}
-			else {
-				jQuery('.wrapper:not(.many-navigation) #header').removeClass('mini');
-			}
+		if ( scrollTop > 200 ) {
+			jQuery('#header').addClass('mini');
+		}
+		else {
+			jQuery('#header').removeClass('mini');
 		}
 	});
 
@@ -72,7 +40,7 @@ jQuery(function() {
 
 ////////////////////////////////////////
 // Header Slider
-jQuery.fn.birdfield_Slider = function(){
+jQuery.fn.birdtherapy_Slider = function(){
 
 	return this.each(function(i, elem) {
 		// change slide
