@@ -1432,40 +1432,6 @@ ul.archive > li .entry-header .entry-title {
   border: solid 1px #085483;
 }
 
-/* bread crumb for wp-manager
--------------------------------------------------------------- */
-#content .bread_crumb {
-  background-color: #f8f8f4;
-  font-size: 0.9em;
-}
-
-#content .bread_crumb ul {
-  list-style-type: none;
-  color: #a09b64;
-  font-size: 0.9rem;
-  margin: 0 auto;
-  padding: 0.425em 0;
-}
-
-#content .bread_crumb ul li {
-  display: inline-block;
-  line-height: 1;
-}
-
-#content .bread_crumb ul a:after {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f105";
-  padding-left: 0.425em;
-  padding-right: 0.2125em;
-  text-decoration: none;
-}
-
 /* Home Header
 --------------------------------------------- */
 #wall {
@@ -1529,26 +1495,22 @@ ul.archive > li .entry-header .entry-title {
 
 /* bread crumb for wp-manager
 -------------------------------------------------------------- */
-#content .bread_crumb_wrapper {
-  background-color: #f4f0e7;
-  color: #847d74;
-  font-size: 0.9rem;
-}
-
 #content ul.bread_crumb {
   list-style-type: none;
-  margin: 0 auto;
+  margin: 5px auto 0;
   padding: 0.4em 0;
+  font-size: 0.9rem;
 }
 
 #content .bread_crumb li {
   display: inline-block;
   line-height: 1;
   vertical-align: top;
+  color: #AAA;
 }
 
 #content ul.bread_crumb li a {
-  color: #847d74;
+  color: #AAA;
 }
 
 #content ul.bread_crumb li a:after {

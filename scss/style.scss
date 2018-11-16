@@ -1319,36 +1319,6 @@ ul.archive {
 	}
 }
 
-/* bread crumb for wp-manager
--------------------------------------------------------------- */
-#content .bread_crumb {
-	background-color: $widget-background-color;
-	font-size: 0.9em;
-
-	ul {
-		list-style-type: none;
-		color: $meta-color;
-		font-size: 0.9rem;
-		margin: 0 auto;
-		padding: #{$line-height /4}em 0;
-
-		li {
-			display: inline-block;
-			line-height: 1;
-		}
-
-		a {
-			&:after {
-				@include font-awesome();
-				content: "\f105";
-				padding-left: #{$line-height /4}em;
-				padding-right: #{$line-height /8}em;
-				text-decoration: none;
-			}
-		}
-	}
-}
-
 /* Home Header
 --------------------------------------------- */
 #wall {
@@ -1416,26 +1386,23 @@ ul.archive {
 
 /* bread crumb for wp-manager
 -------------------------------------------------------------- */
-#content .bread_crumb_wrapper {
-	background-color: #f4f0e7;
-	color: #847d74;
-	font-size: 0.9rem;
-}
-
 #content ul.bread_crumb {
 	list-style-type: none;
-	margin: 0 auto;
+	margin: 5px auto 0;
 	padding: 0.4em 0;
+	font-size: 0.9rem;
+//	border-bottom: dotted 1px $border-color;
 }
 
 #content .bread_crumb li {
 	display: inline-block;
 	line-height: 1;
 	vertical-align: top; 
+	color: #AAA;
 }
 
 #content ul.bread_crumb li a {
-	color: #847d74;
+	color: #AAA;
 }
 
 #content ul.bread_crumb li a:after {
