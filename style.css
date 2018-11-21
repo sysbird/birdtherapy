@@ -410,73 +410,13 @@ html, body {
 /* Menu
 -------------------------------------------------------------- */
 #menu-wrapper #small-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  box-sizing: content-box;
-  width: 2rem;
-  padding: 0;
-  padding-top: 18px;
-  padding-right: .75rem;
-  padding-bottom: 30px;
-  padding-left: .75rem;
-  -webkit-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  border: 0;
-  outline: 0;
-  background-color: transparent;
-}
-
-#menu-wrapper #small-menu .icon {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-}
-
-#menu-wrapper #small-menu .icon, #menu-wrapper #small-menu .icon:before, #menu-wrapper #small-menu .icon:after {
-  width: 100%;
-  height: 2px;
-  -webkit-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  background-color: #24b37e;
-}
-
-#menu-wrapper #small-menu .icon:before, #menu-wrapper #small-menu .icon:after {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  content: ' ';
-}
-
-#menu-wrapper #small-menu .icon:after {
-  top: 10px;
-}
-
-#menu-wrapper #small-menu.current .icon {
-  background-color: transparent;
-}
-
-#menu-wrapper #small-menu.current .icon:before, #menu-wrapper #small-menu.current .icon:after {
-  top: 0;
-}
-
-#menu-wrapper #small-menu.current .icon:before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#menu-wrapper #small-menu.current .icon:after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 100%;
 }
 
 #menu-wrapper ul#menu-primary-items {
   margin: 0;
   padding: 0;
-  display: none;
 }
 
 #menu-wrapper ul#menu-primary-items li {
@@ -506,6 +446,12 @@ html, body {
 #menu-wrapper .current-menu-item > a,
 #menu-wrapper .current-menu-ancestor > a {
   font-weight: bold;
+}
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon::after,
+.drawer-hamburger-icon::before {
+  background-color: #24b37e;
 }
 
 /* Posts
@@ -1704,6 +1650,9 @@ ul.archive > li .entry-header .entry-title {
   #menu-wrapper #small-menu {
     display: none;
     /* hide small menu initially */
+  }
+  #menu-wrapper .menu:not(.drawer-nav) ul#menu-primary-items {
+    transform: translate(0, 0) translateZ(0px) !important;
   }
   #menu-wrapper ul#menu-primary-items {
     /* ensure .menu is visible on desktop version */

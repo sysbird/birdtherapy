@@ -7,12 +7,37 @@ jQuery(function() {
 		// Header Slider
 		jQuery( '.slider[data-interval]' ).birdtherapy_Slider();
 
-	});
+		// set drawer navigation
+		if ( window.matchMedia ) {
+			// MediaQueryList
+			var mq = window.matchMedia( '( max-width: 930px )' );
+			var birdtherapyNavigation = function ( mq ) {
+				if ( mq.matches ) {
+					jQuery( ".menu" ).addClass( 'drawer-nav' );
+					jQuery('.drawer').drawer({
+						class: {
+							nav: 'drawer-nav',
+							toggle: 'drawer-toggle',
+						},
+						scroll: {
+							mouseWheel: true,
+							preventDefault: false
+						},
+						showOverlay: true
+					});
+				}
+				else {
+					// cancel drawer navigation
+					if( jQuery( '.drawer-nav' ).length ) {
+						jQuery('.drawer').drawer('destroy');
+						jQuery( ".menu" ).removeClass( 'drawer-nav' );
+					}
+				}
+			};
 
-	// Navigation for mobile
-	jQuery( "#small-menu" ).click( function(){
-		jQuery( "#menu-primary-items" ).slideToggle();
-		jQuery( this ).toggleClass( "current" );
+			mq.addListener( birdtherapyNavigation );
+			birdtherapyNavigation( mq );
+		}	
 	});
 
 	// Windows Scroll
