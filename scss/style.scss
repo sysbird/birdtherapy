@@ -180,9 +180,9 @@ small {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted #666;
 	cursor: help;
 }
+
 ul,
 ol {
 	margin: 0 0 #{$line-height}em 1rem;
@@ -344,10 +344,6 @@ html, body {
 /* Menu
 -------------------------------------------------------------- */
 #menu-wrapper {
-	#small-menu {
-		background-color: rgba( 255, 255, 255, 0.8 );
-	}
-
 	ul#menu-primary-items {
 		margin: 0;
 		padding: 0;
@@ -437,7 +433,7 @@ html, body {
 
 		&,
 		a {
-			color: $link-color;
+			color: #AAA;
 		}
 	}
 
@@ -451,88 +447,6 @@ html, body {
 
 			&:hover {
 				text-decoration: none;
-			}
-		}
-	}
-}
-
-.entry-meta {
-	font-size: 0.9rem;
-	padding: #{$line-height}em 0;
-	color: $meta-color;
-	clear: both;
-
-	.category,
-	.tag {
-		margin-bottom: #{$line-height /4}em;
-
-		span {
-			width: 7em;
-			padding: 2px 0;
-			display: block;
-			float: left;
-
-			&:before {
-				@include font-awesome();
-				content: "\f07b";
-				padding-right: #{$line-height /8}em;
-			}
-		}
-
-		a {
-			background: #FFF;
-			border: solid 1px $border-color;
-			padding: 2px 5px;
-			color: $meta-color;
-			border-radius: 4px;
-			margin-bottom: 4px;
-			display: inline-block;
-
-			&:hover {
-				background: $widget-background-color;
-				text-decoration:none;
-			}
-		}
-	}
-
-	.tag {
-		span {
-			&:before {
-				@include font-awesome();
-				content:  "\f02c";
-				padding-right: #{$line-height /8}em;
-			}
-		}
-	}
-}
-
-.page-links {
-	clear: both;
-	margin: #{$line-height}em 0;
-	color: $link-color;
-
-	span {
-		background: $link-color;
-		color: #FFF;
-		padding: #{$line-height /5}em #{$line-height /4}em;
-		text-decoration:none;
-		border-radius: 2px;
-		font-weight: normal;
-		text-align: center;
-		border: solid 1px $link-color;
-		display: inline-block;
-		line-height: 1;
-	}
-
-	a {
-		span {
-			color: $link-color;
-			border: solid 1px $link-color;
-			background: #FFF;
-			border-radius: 2px;
-
-			&:hover {
-				background: $widget-background-color;
 			}
 		}
 	}
@@ -833,6 +747,7 @@ form {
 		bottom: 0;
 		left: 42%;
 		z-index: 3;
+		cursor: pointer;
 
 		a {
 			background: $border-color;
@@ -1013,7 +928,7 @@ form {
 		position: relative;
 		@include clearfix;
 
-		&#news,
+		&#about,
 		&#reserve {
 			background-color: $widget-background-color;
 		}
@@ -1106,7 +1021,19 @@ ul.archive {
 	padding: 0;
 
 	>li {
-		margin-bottom: #{$line-height}rem;
+		padding: 0;
+
+		a {
+			display: block;
+			width: 100%;
+			padding: #{$line-height /2}rem 0;
+
+
+			&:hover {
+				text-decoration: none;
+				background: #F5F5F5;
+			}
+		}
 
 		.entry-eyecatch {
 			margin-bottom: 2%;
@@ -1329,10 +1256,9 @@ ul.archive {
 -------------------------------------------------------------- */
 #content ul.bread_crumb {
 	list-style-type: none;
-	margin: 5px auto 0;
-	padding: 0.4em 0;
+	margin: 0;
+	padding: 0;
 	font-size: 0.9rem;
-//	border-bottom: dotted 1px $border-color;
 }
 
 #content .bread_crumb li {
@@ -1801,5 +1727,16 @@ ul.archive {
 
 	.admin-bar #header {
 		top: 46px;
+	}
+}
+
+/* admin-bar
+--------------------------------------------- */
+@media screen and (max-width: 600px) {
+	.admin-bar {
+		.drawer-hamburger,
+		.drawer-nav {
+			top: 46px;
+		}
 	}
 }

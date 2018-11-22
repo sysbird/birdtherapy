@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BirdTHERAPY &#8211; さんぷるページ</title>
 <meta name='robots' content='noindex,follow' />
-<link rel='stylesheet' id='birdtherap-css'  href='style.css?ver=4.8.2' type='text/css' media='all' />
 <script type='text/javascript' src='js/jquery.js?ver=1.12.4'></script>
+<link rel="stylesheet" href="js/drawer/css/drawer.min.css">
+<script src="js/drawer/js/iscroll.js"></script>
+<script src="js/drawer/js/drawer.min.js"></script>
+<link rel='stylesheet' id='birdtherap-css'  href='style.css?ver=4.8.2' type='text/css' media='all' />
 <script type='text/javascript' src='js/birdtherapy.js?ver=1.02'></script>
 <style>
 	a {
@@ -18,16 +21,20 @@
 
 <div class="wrapper">
 	<header id="header">
-		<div class="container">
+		<div class="container drawer drawer--top">
 			<div id="branding">
-				<h1 id="site-title"><a href="#" title="BirdMENU" rel="home">BirdTHERAPY</a></h1>
+				<div id="site-title"><a href="#" title="BirdMENU" rel="home">BirdTHERAPY</a></div>
 				<p id="site-description">the Global Navigation</p>
 			</div>
 
 			<nav id="menu-wrapper">
+				<button type="button" id="small-menu" class="drawer-toggle drawer-hamburger">
+					<span class="sr-only">toggle navigation</span>
+					<span class="drawer-hamburger-icon"></span>
+				</button>
+	
 				<div class="menu">
-					<button id="small-menu" type="button"><span class="icon"></span></button>
-					<ul id="menu-primary-items" class="">
+					<ul id="menu-primary-items" class="drawer-menu">
 						<li class="about menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-304"><a href="#">ホーム</a></li>
 						<li class="aroma menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-306" ><a href="#">お知らせ</a>
 							<ul class="sub-menu">
