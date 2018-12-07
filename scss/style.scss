@@ -364,7 +364,7 @@ html, body {
 			}
 
 			a:hover {
-				background: #ffffee;
+				background: $widget-background-color;
 			}
 
 			span {
@@ -442,8 +442,8 @@ html, body {
 			background-color: $link-color;
 			color: #FFF;
 			padding: 1px 7px;
-			border-radius: 2px;
-			font-size: 0.9rem;
+			border-radius: 10px;
+			font-size: 0.86rem;
 
 			&:hover {
 				text-decoration: none;
@@ -463,7 +463,7 @@ html, body {
 		text-align: center;
 		margin: 0 auto;
 		width: 90%;
-		@include box-shadow(rgba(0,0,0,.05) 0 2px 8px);
+		@include box-shadow(rgba(0,0,0,.1) 2px 3px 0px);
 
 		&:hover {
 			text-decoration: none;
@@ -1711,6 +1711,12 @@ ul.archive {
 		.widget-area-right {
 			margin-left: 20px;
 			width: 32%;
+		}
+	}
+
+	body:not(.home) #content {
+		.container {
+			padding: 0 65px;
 		}
 	}
 }

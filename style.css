@@ -430,7 +430,7 @@ html, body {
 }
 
 #menu-wrapper ul#menu-primary-items li a:hover {
-  background: #ffffee;
+  background: #f8f8f4;
 }
 
 #menu-wrapper ul#menu-primary-items li span {
@@ -511,8 +511,8 @@ html, body {
   background-color: #085483;
   color: #FFF;
   padding: 1px 7px;
-  border-radius: 2px;
-  font-size: 0.9rem;
+  border-radius: 10px;
+  font-size: 0.86rem;
 }
 
 .entry-header .cateogry a:hover {
@@ -529,9 +529,9 @@ html, body {
   text-align: center;
   margin: 0 auto;
   width: 90%;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 2px 8px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.05) 0 2px 8px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0 2px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 3px 0px;
 }
 
 .more a:hover {
@@ -1729,6 +1729,9 @@ ul.archive > li .entry-header .entry-title {
   #widget-area .widget-area-right {
     margin-left: 20px;
     width: 32%;
+  }
+  body:not(.home) #content .container {
+    padding: 0 65px;
   }
 }
 
