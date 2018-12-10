@@ -40,6 +40,16 @@ jQuery(function() {
 		}	
 	});
 
+	// My mapp scroll enable
+	var map = jQuery('#gmap iframe');
+	map.css('pointer-events', 'none');
+	jQuery('#gmap').click(function() {
+		map.css('pointer-events', 'auto');
+	});
+	map.mouseout(function() {
+		map.css('pointer-events', 'none');
+	})
+		
 	// Windows Scroll
 	var totop = jQuery( '#back-top' );
 	totop.hide();
