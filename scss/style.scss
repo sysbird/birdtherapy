@@ -326,6 +326,7 @@ html, body {
 			a {
 				display: block;
 				padding: #{$line-height /2}rem 0;
+				position: relative;
 
 				&:hover {
 					text-decoration: none;
@@ -1266,6 +1267,7 @@ ul.archive {
 	line-height: 1;
 	vertical-align: top; 
 	color: #AAA;
+	text-decoration: underline;
 }
 
 #content ul.bread_crumb li a {
@@ -1281,6 +1283,7 @@ ul.archive {
 	padding-right: 0.2em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
 }
 
 .single #content ul.bread_crumb li:last-child,

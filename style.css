@@ -394,6 +394,7 @@ html, body {
 #header #branding #site-title a {
   display: block;
   padding: 0.85rem 0;
+  position: relative;
 }
 
 #header #branding #site-title a:hover {
@@ -1367,6 +1368,7 @@ ul.archive > li .entry-header .entry-title {
   line-height: 1;
   vertical-align: top;
   color: #AAA;
+  text-decoration: underline;
 }
 
 #content ul.bread_crumb li a {
@@ -1382,6 +1384,7 @@ ul.archive > li .entry-header .entry-title {
   padding-right: 0.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
 }
 
 .single #content ul.bread_crumb li:last-child,
