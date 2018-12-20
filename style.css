@@ -10,6 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This theme, like WordPress, is licensed under the GPL.
 */
+/*------------------------------
+reset
+-----------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -334,12 +337,6 @@ body {
   *zoom: 1;
 }
 
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 #content .container {
   margin: 1.7rem auto;
 }
@@ -466,12 +463,6 @@ html, body {
   *zoom: 1;
 }
 
-.hentry:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .entry-eyecatch {
   margin: 0 -2%;
 }
@@ -590,7 +581,7 @@ img.aligncenter {
 }
 
 a:hover img {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  filter: progid:DXImageTransform.Microsoft.Alpha Opacity=90;
   opacity: 0.9;
 }
 
@@ -840,7 +831,7 @@ form span[role=alert]:before {
   width: 50px;
   text-align: center;
   text-decoration: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  filter: progid:DXImageTransform.Microsoft.Alpha Opacity=75;
   opacity: 0.75;
 }
 
@@ -1591,11 +1582,6 @@ ul.archive > li .entry-header .entry-title {
   #menu-wrapper {
     margin-top: 0;
     *zoom: 1;
-  }
-  #menu-wrapper:after {
-    content: "";
-    display: table;
-    clear: both;
   }
   #menu-wrapper #small-menu {
     display: none;

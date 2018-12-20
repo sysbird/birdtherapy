@@ -11,9 +11,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This theme, like WordPress, is licensed under the GPL.
 */
 
-@import "compass";
-@import "compass/reset";
-
 // variable
 $background-color: #FFF;
 $text-color: #151515;
@@ -23,6 +20,66 @@ $accent-color:#24b37e;
 $border-color: #e7e7e7;
 $meta-color: #a09b64;
 $line-height: 1.7;
+
+/*------------------------------
+reset
+-----------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
 
 /*------------------------------
 Font Awesome
@@ -43,6 +100,48 @@ Font Awesome
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin box-sizing() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}  
+
+@mixin pie-clearfix() {
+	*zoom: 1;
+}
+
+@mixin box-shadow( $c: #000000, $h: 0, $v: 0, $b: 0 ) {
+	-webkit-box-shadow: $c $h $v $b;
+	-moz-box-shadow: $c $h $v $b;
+	box-shadow: $c $h $v $b;
+  }
+
+@mixin opacity( $opacity ) {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity= $opacity *100 );
+	opacity: $opacity;
+}
+
+@mixin clearfix() {
+	overflow: hidden;
+	*zoom: 1;
+}
+	
+@mixin hide-text(){
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+}
+
+@mixin display-flex(){
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($v) {
+	-webkit-flex: $v;
+	flex: $v;
 }
 
 /* element
@@ -251,7 +350,7 @@ html {
 	font-size: 1.1em;
 
 	* {
-		@include box-sizing( border-box );
+		@include box-sizing();
 	}
 }
 
@@ -464,7 +563,7 @@ html, body {
 		text-align: center;
 		margin: 0 auto;
 		width: 90%;
-		@include box-shadow(rgba(0,0,0,.1) 2px 3px 0px);
+		@include box-shadow(rgba(0,0,0,.1), 2px, 3px, 0px);
 
 		&:hover {
 			text-decoration: none;
