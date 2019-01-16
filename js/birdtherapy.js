@@ -76,7 +76,6 @@ jQuery(function() {
 ////////////////////////////////////////
 // Header Slider
 jQuery.fn.birdtherapy_Slider = function(){
-
 	return this.each(function(i, elem) {
 		// change slide
 		var setos_interval = jQuery( '.slider' ).attr( 'data-interval' );

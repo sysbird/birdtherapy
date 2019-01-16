@@ -24,7 +24,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
-			<ul class="archive">
+			<ul class="list">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
