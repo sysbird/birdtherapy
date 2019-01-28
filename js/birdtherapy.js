@@ -58,13 +58,21 @@ jQuery(function() {
 		var scrollTop = parseInt( jQuery( this ).scrollTop() );
 		if ( scrollTop > 800 ) totop.fadeIn(); else totop.fadeOut();
 
-		// mini header with scroll
+		// fixed header with scroll
 		if ( scrollTop > 200 ) {
-			jQuery('#header').addClass('mini');
+			jQuery('body').addClass('fixed-header');
 		}
 		else {
-			jQuery('#header').removeClass('mini');
+			jQuery('body').removeClass('fixed-header');
 		}
+
+		if ( scrollTop > 300 ) {
+			jQuery('.fixed-header #header').addClass('show');
+		}
+		else{
+			jQuery('.fixed-header #header').removeClass('show');
+		}
+
 	});
 
 	// back to pagetop
